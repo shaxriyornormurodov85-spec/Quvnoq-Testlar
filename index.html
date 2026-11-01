@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neon Duel Quiz</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand">Neon Duel</div>
+        <div class="status" id="turnBanner">Player 1 turn</div>
+      </header>
+
+      <main>
+        <section id="startScreen" class="screen active">
+          <div class="panel intro-panel">
+            <p class="eyebrow">2-Player Challenge</p>
+            <h1>Quiz Battle</h1>
+            <p class="subtitle">Kichik va tezkor savol bahsi. Har bir to‘g‘ri javob 10 ball.</p>
+
+            <div class="player-form">
+              <label>
+                <span>Player 1</span>
+                <input id="player1Name" type="text" maxlength="16" value="Player 1" />
+              </label>
+              <label>
+                <span>Player 2</span>
+                <input id="player2Name" type="text" maxlength="16" value="Player 2" />
+              </label>
+            </div>
+
+            <button id="startBtn" class="primary-btn">Start game</button>
+          </div>
+        </section>
+
+        <section id="gameScreen" class="screen">
+          <div class="panel game-panel">
+            <div class="hud">
+              <div class="hud-item">
+                <span>Round</span>
+                <strong id="roundLabel">1 / 10</strong>
+              </div>
+              <div class="hud-item">
+                <span>Time</span>
+                <strong id="timeLabel">15</strong>
+              </div>
+              <div class="hud-item">
+                <span>Score</span>
+                <strong id="scoreLabel">0 - 0</strong>
+              </div>
+            </div>
+
+            <div class="question-card">
+              <p class="question-tag" id="questionTag">Player 1</p>
+              <h2 id="questionText">Question text</h2>
+              <div id="options" class="options"></div>
+            </div>
+          </div>
+        </section>
+
+        <section id="resultScreen" class="screen">
+          <div class="panel result-panel">
+            <p class="eyebrow">Game over</p>
+            <h2 id="winnerTitle">Winner!</h2>
+            <div class="final-score" id="finalScore">0 - 0</div>
+            <button id="restartBtn" class="primary-btn">Play again</button>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
