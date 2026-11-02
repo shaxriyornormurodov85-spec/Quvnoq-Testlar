@@ -1,20 +1,23 @@
 const questionBank = {
   matematika: {
-    oson: [
+    basic: [
       { question: '3 × 7 necha bo\'ladi?', options: ['18', '20', '21', '24'], answer: '21' },
       { question: 'Qaysi son juft?', options: ['15', '17', '18', '19'], answer: '18' },
       { question: '40 ÷ 5 necha?', options: ['7', '8', '9', '10'], answer: '8' },
       { question: '10 + 15 = ?', options: ['20', '23', '25', '30'], answer: '25' },
-      { question: '9 - 4 = ?', options: ['3', '4', '5', '6'], answer: '5' }
+      { question: '9 - 4 = ?', options: ['3', '4', '5', '6'], answer: '5' },
+      { question: '12 + 8 = ?', options: ['18', '19', '20', '21'], answer: '20' },
+      { question: 'Qaysi son eng katta?', options: ['12', '23', '19', '17'], answer: '23' },
+      { question: '8 + 7 = ?', options: ['13', '14', '15', '16'], answer: '15' },
+      { question: '4 × 5 = ?', options: ['16', '18', '20', '22'], answer: '20' },
+      { question: '18 - 9 = ?', options: ['7', '8', '9', '10'], answer: '9' }
     ],
-    orta: [
+    advanced: [
       { question: '25% ni oddiy kasr ko\'rinishida ifodalang.', options: ['1/4', '1/2', '2/5', '3/4'], answer: '1/4' },
       { question: 'Kvadratning tomoni 6 sm bo\'lsa, yuzi qancha?', options: ['12', '24', '36', '48'], answer: '36' },
       { question: '2x = 14 bo\'lsa, x ning qiymati nechaga teng?', options: ['6', '7', '8', '9'], answer: '7' },
       { question: '1/2 + 1/4 = ?', options: ['1/3', '2/4', '3/4', '1'], answer: '3/4' },
-      { question: '12 × 11 = ?', options: ['121', '122', '132', '144'], answer: '132' }
-    ],
-    qiyin: [
+      { question: '12 × 11 = ?', options: ['121', '122', '132', '144'], answer: '132' },
       { question: 'x² - 9 = 0 tenglamaning ildizlari yig\'indisi qancha?', options: ['0', '3', '6', '9'], answer: '0' },
       { question: 'Aylananing radiusi 7 bo\'lsa, uzunligi qancha? (π≈3.14)', options: ['21.98', '43.96', '49', '154'], answer: '43.96' },
       { question: '5! = ?', options: ['20', '60', '120', '150'], answer: '120' },
@@ -23,67 +26,76 @@ const questionBank = {
     ]
   },
   biologiya: {
-    oson: [
+    basic: [
       { question: 'Qaysi hayvon suvda yashaydi?', options: ['Baliq', 'Ot', 'Bo\'ri', 'Qoplon'], answer: 'Baliq' },
       { question: 'O\'simliklarning oziq ishlab chiqarish organi nima?', options: ['Yurak', 'Ildiz', 'Barg', 'Tomoq'], answer: 'Barg' },
       { question: 'Qaysi organizm fotosintez qiladi?', options: ['O\'simlik', 'Konditer', 'Zararkunanda', 'Mushuk'], answer: 'O\'simlik' },
       { question: 'Yurak qaysi a\'zodir?', options: ['Harakat organi', 'Qon aylanish organi', 'Nafas organi', 'Bilvosita organ'], answer: 'Qon aylanish organi' },
-      { question: 'Qaysi hayvon qush emas?', options: ['Tulki', 'Qarg\'a', 'Qaldirg\'och', 'Burgut'], answer: 'Tulki' }
+      { question: 'Qaysi hayvon qush emas?', options: ['Tulki', 'Qarg\'a', 'Qaldirg\'och', 'Burgut'], answer: 'Tulki' },
+      { question: 'O\'simliklar qayerdan suv oladi?', options: ['Ildizdan', 'Bargdan', 'Guldan', 'Mevadan'], answer: 'Ildizdan' },
+      { question: 'Tayanch to\'qima nima uchun kerak?', options: ['Yordam berish', 'Qonni yetkazish', 'Yurak urishi', 'Qayta ishlash'], answer: 'Yordam berish' },
+      { question: 'Qaysi a\'zo nafas oladi?', options: ['O\'pka', 'Barmoq', 'Bo\'yin', 'Quloq'], answer: 'O\'pka' },
+      { question: 'Baliqlar nima bilan nafas oladi?', options: ['G\'ildirak bilan', 'G\'ildirak', 'G\'ildirak qobiqlar bilan', 'G\'ildiraklarning osti'], answer: 'G\'ildirak bilan' },
+      { question: 'O\'simliklarning yashash muhiti qaysi?', options: ['Yer', 'Suv', 'Havo', 'Barchasi'], answer: 'Barchasi' }
     ],
-    orta: [
+    advanced: [
       { question: 'Qanday hujayra jarayonida o\'simliklar glyukoza hosil qiladi?', options: ['Fotosintez', 'Nafas olish', 'Hayot sikli', 'Ko\'payish'], answer: 'Fotosintez' },
       { question: 'Aql bovar qilmaydigan qaysi a\'zo qon pompasi vazifasini bajaradi?', options: ['Yurak', 'O\'pka', 'Buyrak', 'Jigar'], answer: 'Yurak' },
       { question: 'Qaysi organimiz ovqat hazm qilishda asosiy rol oynaydi?', options: ['Jigar', 'Oshqozon', 'Buyrak', 'Miya'], answer: 'Oshqozon' },
       { question: 'Yurak urishi nima uchun kerak?', options: ['Qonni harakatga keltirish', 'Ovqatni hazm qilish', 'Nafas olish', 'Uyqu'], answer: 'Qonni harakatga keltirish' },
-      { question: 'O\'simliklar qayerdan suv oladi?', options: ['Ildizdan', 'Bargdan', 'Guldan', 'Mevadan'], answer: 'Ildizdan' }
-    ],
-    qiyin: [
       { question: 'DNK qaysi ferment yordamida ko\'payadi?', options: ['Polimeraza', 'Lipaza', 'Amilaza', 'Pepsin'], answer: 'Polimeraza' },
       { question: 'Qaysi hujayra organoidi energiya ishlab chiqaradi?', options: ['Mitoxondriya', 'Yadro', 'Golji majmuasi', 'Lizosoma'], answer: 'Mitoxondriya' },
       { question: 'Barglardagi stomatalar vazifasi nima?', options: ['Gaz almashinuvi', 'Qon aylanish', 'Hujayra bo\'linishi', 'Energiya ishlab chiqarish'], answer: 'Gaz almashinuvi' },
       { question: 'Havo orqali nafas oladigan organizmlar qanday jarayonni amalga oshiradi?', options: ['Nafas olish', 'Fotosintez', 'Chet elga chiqish', 'Ko\'payish'], answer: 'Nafas olish' },
-      { question: 'Qaysi organizmning tana hujayralari plastidga ega?', options: ['O\'simlik', 'Zamburug\'', 'Bakteriya', 'Hayvon'], answer: 'O\'simlik' }
+      { question: 'Qaysi organizmning tana hujayralari plastidga ega?', options: ['O\'simlik', 'Zamburug\'', 'Bakteriya', 'Hayvon'], answer: 'O\'simlik' },
+      { question: 'Qaysi organ hujayralarda ATP hosil qiladi?', options: ['Mitoxondriya', 'Yadro', 'Ribosoma', 'Lizosoma'], answer: 'Mitoxondriya' }
     ]
   },
   geografiya: {
-    oson: [
+    basic: [
       { question: 'O\'zbekistonning poytaxti qaysi shahar?', options: ['Samarqand', 'Nukus', 'Toshkent', 'Buxoro'], answer: 'Toshkent' },
       { question: 'Dunyo eng katta okeani qaysi?', options: ['Atlantika', 'Tinch okeani', 'Hind okeani', 'Shimoliy Muz okeani'], answer: 'Tinch okeani' },
-      { question: 'Qaysi qit\'ada afrika bor?', options: ['Yevropa', 'Afrika', 'Avstraliya', 'Antarktida'], answer: 'Afrika' },
+      { question: 'Qaysi qit\'ada Afrika bor?', options: ['Yevropa', 'Afrika', 'Avstraliya', 'Antarktida'], answer: 'Afrika' },
       { question: 'Qaysi davlat "Piza minorasi" bilan tanilgan?', options: ['Italiya', 'Fransiya', 'Ispaniya', 'Germaniya'], answer: 'Italiya' },
-      { question: 'Yer yuzasidagi eng katta cho\'l qaysi?', options: ['Gobi', 'Sahara', 'Kalahari', 'Arab cho\'li'], answer: 'Sahara' }
+      { question: 'Yer yuzasidagi eng katta cho\'l qaysi?', options: ['Gobi', 'Sahara', 'Kalahari', 'Arab cho\'li'], answer: 'Sahara' },
+      { question: 'Qaysi qit\'a eng katta?', options: ['Afrika', 'Yevropa', 'Osiyo', 'Avstraliya'], answer: 'Osiyo' },
+      { question: 'Katta okean necha xil?', options: ['2', '3', '4', '5'], answer: '4' },
+      { question: 'Qaysi davlat O\'rta Osiyoda joylashgan?', options: ['Italiya', 'O\'zbekiston', 'Braziliya', 'Yaponiya'], answer: 'O\'zbekiston' },
+      { question: 'Qaysi daryo O\'zbekistonda katta?', options: ['Nil', 'Amudaryo', 'Amazonka', 'Misisipi'], answer: 'Amudaryo' },
+      { question: 'Yerning tabiiy yo\'ldoshi nima?', options: ['Oy', 'Venera', 'Mars', 'Yupiter'], answer: 'Oy' }
     ],
-    orta: [
+    advanced: [
       { question: 'Qaysi cho\'l Janubiy Amerika qit\'asida joylashgan?', options: ['Sahara', 'Atakama', 'Gobi', 'Kalahari'], answer: 'Atakama' },
       { question: 'Yevropaning eng uzun daryosi qaysi?', options: ['Dunay', 'Volga', 'Rin', 'Dnepr'], answer: 'Volga' },
       { question: 'Qaysi mamlakatda "Eiffel minorasi" bor?', options: ['Italiya', 'Fransiya', 'Germaniya', 'Ispaniya'], answer: 'Fransiya' },
-      { question: 'Qaysi qit\'a eng katta?', options: ['Afrika', 'Yevropa', 'Osiyo', 'Avstraliya'], answer: 'Osiyo' },
-      { question: 'Yerning tabiiy sun\'iy yo\'ldoshi nima?', options: ['Oy', 'Venera', 'Mars', 'Yupiter'], answer: 'Oy' }
-    ],
-    qiyin: [
+      { question: 'Qaysi qit\'ada eng past nuqta - Yer osti cho\'li joylashgan?', options: ['Afrika', 'Avstraliya', 'Yevropa', 'Antarktida'], answer: 'Afrika' },
       { question: 'Qaysi daryo Misrdan oqib o\'tadi?', options: ['Nil', 'Amazonka', 'Yangtze', 'Misisipi'], answer: 'Nil' },
       { question: 'Qaysi mamlakat "Tian Shan" tog\'lari bilan tanilgan?', options: ['Qozog\'iston', 'O\'zbekiston', 'Tojikiston', 'Turkiya'], answer: 'O\'zbekiston' },
       { question: 'Qaysi okean dengizlardan eng katta?', options: ['Atlantika', 'Tinch okeani', 'Sho\'r okean', 'Hind okeani'], answer: 'Tinch okeani' },
       { question: 'Qaysi shahar "Yashil shahar" nomi bilan tanilgan?', options: ['Toshkent', 'Dubay', 'Singapur', 'Kuala Lumpur'], answer: 'Singapur' },
-      { question: 'Qaysi qit\'ada eng past nuqta - Yer osti cho\'li joylashgan?', options: ['Afrika', 'Avstraliya', 'Yevropa', 'Antarktida'], answer: 'Afrika' }
+      { question: 'Qaysi davlatning qirg\'og\'i ko\'p?', options: ['Rossiya', 'Yaponiya', 'Braziliya', 'Germaniya'], answer: 'Rossiya' },
+      { question: 'Qaysi qit\'ada eng yirik cho\'l bor?', options: ['Afrika', 'Avstraliya', 'Yevropa', 'Antarktida'], answer: 'Afrika' }
     ]
   },
   tarix: {
-    oson: [
+    basic: [
       { question: 'O\'zbekiston mustaqillik kunini qaysi yilda oldi?', options: ['1990', '1991', '1992', '1995'], answer: '1991' },
       { question: 'Qaysi shahar "Sharqning go\'zal shahri" deb ataladi?', options: ['Samarqand', 'Buxoro', 'Toshkent', 'Xiva'], answer: 'Samarqand' },
       { question: 'Qaysi shaxs "Buxoroi sharif" nomi bilan tanilgan?', options: ['Amir Temur', 'Bobur', 'Ulug\'bek', 'Alisher Navoiy'], answer: 'Amir Temur' },
       { question: 'Buvi qaysi davrga tegishli?', options: ['O\'rta asr', 'Zamon', 'Neolit', 'Yangi asr'], answer: 'O\'rta asr' },
-      { question: 'Qaysi hukmdor Samarqandni poytaxt qildi?', options: ['Amir Temur', 'Bobur', 'Ulug\'bek', 'Temur Malik'], answer: 'Amir Temur' }
+      { question: 'Qaysi hukmdor Samarqandni poytaxt qildi?', options: ['Amir Temur', 'Bobur', 'Ulug\'bek', 'Temur Malik'], answer: 'Amir Temur' },
+      { question: 'Qaysi yilga qadar O\'zbekiston mustaqil bo\'ldi?', options: ['1990', '1991', '1992', '1994'], answer: '1991' },
+      { question: 'Qaysi sharafiga O\'zbekiston nomi berilgan?', options: ['Ustoz', 'Qadriyat', 'Mustaqillik', 'Yashash'], answer: 'Mustaqillik' },
+      { question: 'Qaysi hukmdor davlatni barpo etdi?', options: ['Amir Temur', 'Ali', 'Bobur', 'Sardor'], answer: 'Amir Temur' },
+      { question: 'Qaysi yilda bayram bo\'ladi?', options: ['1945', '1991', '2000', '1970'], answer: '1991' },
+      { question: 'Qaysi tarixiy shaxs adabiyotga ta\'sir etdi?', options: ['Alisher Navoiy', 'Quvnoq', 'Haydovchi', 'Bo\'ri'], answer: 'Alisher Navoiy' }
     ],
-    orta: [
+    advanced: [
       { question: 'Qaysi yilgi voqealar "Buyuk geografik kashfiyotlar" deb nomlanadi?', options: ['15-16 asr', '13-14 asr', '17-18 asr', '19 asr'], answer: '15-16 asr' },
       { question: 'Qaysi qahramon Chingizxon bilan birga yurish qilgan?', options: ['Temur', 'Bektemir', 'Jaloliddin Manguberdi', 'Nemat'], answer: 'Jaloliddin Manguberdi' },
       { question: 'Qaysi davlatning asoschisi Napoleon?', options: ['Fransiya', 'Italiya', 'Germaniya', 'Angliya'], answer: 'Fransiya' },
-      { question: 'Qaysi yil 9-may Bayrami nishonlanadi?', options: ['1941', '1945', '1947', '1950'], answer: '1945' },
-      { question: 'Alisher Navoiy qaysi asarini yozgan?', options: ['“Farhod va Shirin”', '“Boburnoma”', '“Ming bir kecha”', '“Qutadgu bilig”'], answer: '“Farhod va Shirin”' }
-    ],
-    qiyin: [
+      { question: 'Qaysi yilga 9-may Bayrami nishonlanadi?', options: ['1941', '1945', '1947', '1950'], answer: '1945' },
+      { question: 'Alisher Navoiy qaysi asarini yozgan?', options: ['“Farhod va Shirin”', '“Boburnoma”', '“Ming bir kecha”', '“Qutadgu bilig”'], answer: '“Farhod va Shirin”' },
       { question: 'Qaysi hukmdor Mavlono Jaloliddin Rumi bilan bog\'liq?', options: ['Sultan Salohiddin', 'Giyosiddin Balban', 'Sulton Muhammad', 'Xoja Ahror'], answer: 'Sultan Salohiddin' },
       { question: 'Qaysi voqeada "Ming yillik urush" bo\'lgan?', options: ['Fransiya va Angliya', 'AQSh va Ispaniya', 'Rossiya va Turkiya', 'Italiya va Germaniya'], answer: 'Fransiya va Angliya' },
       { question: 'Qaysi sulola O\'rta Osiyoda hukmronlik qilgan?', options: ['Samaniylar', 'Mongollar', 'Rashidiylar', 'Shayboniylar'], answer: 'Samaniylar' },
@@ -92,89 +104,190 @@ const questionBank = {
     ]
   },
   informatika: {
-    oson: [
+    basic: [
       { question: 'Qaysi buyruq ekranga yozuv chiqaradi?', options: ['print()', 'show()', 'type()', 'echo()'], answer: 'print()' },
       { question: 'HTML da eng katta sarlavha tegini tanlang.', options: ['<h1>', '<p>', '<h3>', '<title>'], answer: '<h1>' },
       { question: 'Qaysi kodning ma\'nosi “faqat qaysi sahifa”?', options: ['CSS', 'HTML', 'JS', 'PNG'], answer: 'HTML' },
       { question: 'Qaysi buyruq faylni saqlashga yordam beradi?', options: ['save()', 'write()', 'download()', 'open()'], answer: 'save()' },
-      { question: 'Qaysi dasturlash tili web sahifalarga interfaol xususiyat beradi?', options: ['JavaScript', 'CSS', 'HTML', 'Python'], answer: 'JavaScript' }
+      { question: 'Qaysi dasturlash tili web sahifalarga interfaol xususiyat beradi?', options: ['JavaScript', 'CSS', 'HTML', 'Python'], answer: 'JavaScript' },
+      { question: 'Qaysi ma\'lumot turi “haqiqat/yolg\'on” ni saqlaydi?', options: ['boolean', 'string', 'number', 'object'], answer: 'boolean' },
+      { question: 'Qaysi so\'z veb sahifaning uslubini boshqaradi?', options: ['CSS', 'HTML', 'JS', 'XML'], answer: 'CSS' },
+      { question: 'Massivda elementlarni sanash uchun ishlatiladi?', options: ['length', 'count', 'size', 'sum'], answer: 'length' },
+      { question: 'Qaysi operator tenglikni tekshiradi?', options: ['==', '=', '===', '!='], answer: '==' },
+      { question: 'Qaysi buyruq ekranga chiqadi?', options: ['alert()', 'show()', 'scroll()', 'move()'], answer: 'alert()' }
     ],
-    orta: [
+    advanced: [
       { question: 'Qaysi format veb sahifa dizaynini boshqaradi?', options: ['CSS', 'JS', 'HTML', 'XML'], answer: 'CSS' },
       { question: 'Qaysi operator tenglikni tekshiradi?', options: ['==', '=', '===', '!='], answer: '==' },
       { question: 'Massivda elementlarni sanash uchun ishlatiladigan xususiyat?', options: ['length', 'size', 'count', 'total'], answer: 'length' },
       { question: 'Qaysi ma\'lumot turi “haqiqat/yolg\'on” ni saqlaydi?', options: ['boolean', 'string', 'number', 'object'], answer: 'boolean' },
-      { question: 'JavaScriptda takrorlash uchun qaysi tsikl ishlatiladi?', options: ['for', 'if', 'switch', 'const'], answer: 'for' }
-    ],
-    qiyin: [
+      { question: 'JavaScriptda takrorlash uchun qaysi tsikl ishlatiladi?', options: ['for', 'if', 'switch', 'const'], answer: 'for' },
       { question: 'Qaysi usul massivni tartiblangan qilib qaytaradi?', options: ['sort()', 'join()', 'map()', 'split()'], answer: 'sort()' },
       { question: 'Qaysi funksiya ma\'lumotni JSON formatga aylantiradi?', options: ['JSON.stringify()', 'JSON.parse()', 'Math.random()', 'Array.pop()'], answer: 'JSON.stringify()' },
-      { question: 'Qaysi qiymat JSda falsy bo\'ladi?', options: ['0', '""', 'false', 'barchasi'], answer: 'barchasi' },
       { question: 'DOM deganda nima tushuniladi?', options: ['Dokument obyekt modeli', 'Dastur ma\'lumot modeli', 'Dastur o\'zgartirish mexanizmi', 'Down object manager'], answer: 'Dokument obyekt modeli' },
-      { question: 'Qaysi operator “va” ma\'nosi bilan ishlatiladi?', options: ['&&', '||', '==', '!='], answer: '&&' }
+      { question: 'Qaysi operator “va” ma\'nosi bilan ishlatiladi?', options: ['&&', '||', '==', '!='], answer: '&&' },
+      { question: 'Qaysi qiymat JSda falsy bo\'ladi?', options: ['0', '""', 'false', 'barchasi'], answer: 'barchasi' }
     ]
   },
   adabiyot: {
-    oson: [
+    basic: [
       { question: '“Boburnoma” kitobining muallifi kim?', options: ['Bobur', 'Navoiy', 'Furqat', 'Guliston'], answer: 'Bobur' },
       { question: 'Qaysi shoir “Yorqin tush” she\'rini yozgan?', options: ['Navoiy', 'Furqat', 'Hamza', 'Chulpon'], answer: 'Navoiy' },
       { question: '“Qora qog\'oz” asari kimga tegishli?', options: ['Abdulla Qahhor', 'Cho\'lpon', 'Oybek', 'G\'afur G\'ulom'], answer: 'Abdulla Qahhor' },
       { question: 'Qaysi asar “Oltin vodiy” haqida yozilgan?', options: ['“Qorako\'l”', '“Ming bir kecha”', '“Navoiy”', '“O\'zingni o\'zi asir qil”'], answer: '“Qorako\'l”' },
-      { question: 'Adabiyotdagi “epik” nima?', options: ['Katta hajmli asar', 'Qisqa she\'r', 'Maqola', 'Dramatik matn'], answer: 'Katta hajmli asar' }
-    ],
-    orta: [
-      { question: '“Farhod va Shirin” poemasining muallifi kim?', options: ['Navoiy', 'Furqat', 'Navoi', 'Hamza'], answer: 'Navoiy' },
+      { question: 'Adabiyotdagi “epik” nima?', options: ['Katta hajmli asar', 'Qisqa she\'r', 'Maqola', 'Dramatik matn'], answer: 'Katta hajmli asar' },
+      { question: 'She\'rning qisqacha turi nimadan iborat?', options: ['Bayt', 'Matn', 'Hikoya', 'Roman'], answer: 'Bayt' },
+      { question: 'Qaysi janrda voqealar rivojlanadi?', options: ['Roman', 'Maqola', 'She\'r', 'Mantiq'], answer: 'Roman' },
+      { question: '“Farhod va Shirin” asari kimga tegishli?', options: ['Navoiy', 'Hamza', 'Furqat', 'Chulpon'], answer: 'Navoiy' },
       { question: '“Yetti yoqti” shakli qaysi janrga tegishli?', options: ['She\'r', 'Roman', 'Doston', 'Qisqa hikoya'], answer: 'Doston' },
+      { question: 'Qaysi muallif “Shum bola” hikoyasini yozgan?', options: ['Oybek', 'Abdulla Qahhor', 'G\'afur G\'ulom', 'Hamza'], answer: 'Abdulla Qahhor' }
+    ],
+    advanced: [
+      { question: '“Farhod va Shirin” poemasining muallifi kim?', options: ['Navoiy', 'Furqat', 'Navoi', 'Hamza'], answer: 'Navoiy' },
       { question: '“Sovet adabiyoti” qaysi asrga oid?', options: ['20-asr', '18-asr', '10-asr', '17-asr'], answer: '20-asr' },
       { question: 'Qaysi yozuvchi “Shaytanat” asari bilan tanilgan?', options: ['Abdulla Qahhor', 'Tolstoy', 'G\'afur G\'ulom', 'Chulpon'], answer: 'G\'afur G\'ulom' },
-      { question: 'Qaysi janrda yoshlar hayoti va muammolari aks etadi?', options: ['Roman', 'Masal', 'Maqola', 'Vaqf'], answer: 'Roman' }
-    ],
-    qiyin: [
+      { question: 'Qaysi janrda yoshlar hayoti va muammolari aks etadi?', options: ['Roman', 'Masal', 'Maqola', 'Vaqf'], answer: 'Roman' },
       { question: '“Maqsadim - Hayot” asari kimga tegishli?', options: ['Abdulla Qahhor', 'Chulpon', 'G\'afur G\'ulom', 'Fitrat'], answer: 'Chulpon' },
       { question: '“Qutadgu bilig” asari qanday janrga kiradi?', options: ['Nasr', 'She\'r', 'Doston', 'Dramma'], answer: 'She\'r' },
-      { question: 'Qaysi muallif “Shum bola” hikoyasini yozgan?', options: ['Oybek', 'Abdulla Qahhor', 'G\'afur G\'ulom', 'Hamza'], answer: 'Abdulla Qahhor' },
-      { question: '“Beyaz” asari qaysi janrga kiradi?', options: ['Roman', 'She\'r', 'Hikoya', 'Doston'], answer: 'Roman' },
-      { question: '“Muloqot” so\'zi qaysi ma\'noni bildiradi?', options: ['Suhbat', 'Tushuncha', 'Aqliy xabardorlik', 'Yod'], answer: 'Suhbat' }
+      { question: '“Muloqot” so\'zi qaysi ma\'noni bildiradi?', options: ['Suhbat', 'Tushuncha', 'Aqliy xabardorlik', 'Yod'], answer: 'Suhbat' },
+      { question: 'Qaysi janrda ma\'naviy va axloqiy masalalar yoritiladi?', options: ['Doston', 'Roman', 'Maqola', 'Hikoya'], answer: 'Roman' },
+      { question: 'Qaysi asar “Beyaz” nomi bilan tanilgan?', options: ['She\'r', 'Roman', 'Hikoya', 'Doston'], answer: 'Roman' },
+      { question: 'Adabiyotdagi asosiy hikoya elementlari qaysi?', options: ['Qahramon, voqea, muammo', 'Maqola, ta\'rif, xulosa', 'Narsalar, fikir, savol'], answer: 'Qahramon, voqea, muammo' }
+    ]
+  },
+  english: {
+    basic: [
+      { question: 'Hello means?', options: ['Salom', 'Yaxshi', 'Uy', 'Dars'], answer: 'Salom' },
+      { question: 'Book in Uzbek?', options: ['Kitob', 'Maktab', 'Yorug\'lik', 'Qalam'], answer: 'Kitob' },
+      { question: 'One + two = ?', options: ['Three', 'Four', 'Five', 'Two'], answer: 'Three' },
+      { question: 'Dog = ?', options: ['It', 'Mushuk', 'Sigir', 'Quyon'], answer: 'It' },
+      { question: 'I am happy means?', options: ['Men baxtliman', 'Men charchadim', 'Men uydayman', 'Men uydaman'], answer: 'Men baxtliman' },
+      { question: 'School means?', options: ['Maktab', 'Uy', 'Bog\'', 'Gul'], answer: 'Maktab' },
+      { question: 'What is your name?', options: ['Ismingiz nima?', 'Qayerdasiz?', 'Yoshingiz nechada?', 'Nega?'], answer: 'Ismingiz nima?' },
+      { question: 'Good morning = ?', options: ['Xayrli tong', 'Xayrli kech', 'Salom', 'Yaxshimusiz'], answer: 'Xayrli tong' },
+      { question: 'Apple = ?', options: ['Olma', 'Anor', 'Uzum', 'Nok'], answer: 'Olma' },
+      { question: 'How are you? = ?', options: ['Qalaysiz?', 'Kim siz?', 'Nima qilyapsiz?', 'Yaxshimisiz?'], answer: 'Qalaysiz?' }
+    ],
+    advanced: [
+      { question: 'I have done my homework. Meaning?', options: ['Uy vazifasini qildim', 'Maktabga ketdim', 'Uyquga ketdim', 'Test ishladim'], answer: 'Uy vazifasini qildim' },
+      { question: 'She goes to school every day.', options: ['U har kuni maktabga boradi', 'U maktabda ishlaydi', 'U har kuni uyda turadi', 'U maktabga bormaydi'], answer: 'U har kuni maktabga boradi' },
+      { question: 'By the way = ?', options: ['Aytmoqchimanki', 'Kechirasiz', 'Tasodifan', 'Yaxshilab'], answer: 'Aytmoqchimanki' },
+      { question: 'We are studying English.', options: ['Biz ingliz tilini o\'rganmoqdamiz', 'Biz rus tilini bilamiz', 'Biz sport bilan shug\'ullanamiz', 'Biz uyga keldik'], answer: 'Biz ingliz tilini o\'rganmoqdamiz' },
+      { question: 'The opposite of “expensive” is?', options: ['Cheap', 'Large', 'Small', 'Fast'], answer: 'Cheap' },
+      { question: 'Choose correct sentence: “He ____ a doctor.”', options: ['is', 'am', 'are', 'be'], answer: 'is' },
+      { question: 'My mother is ___ teacher.', options: ['a', 'an', 'the', '-'], answer: 'a' },
+      { question: 'Which one is correct?', options: ['I have two books', 'I has two books', 'I am two books', 'I two books'], answer: 'I have two books' },
+      { question: 'Translate: “Men kelaman.”', options: ['I come', 'I am coming', 'I will come', 'I came'], answer: 'I am coming' },
+      { question: 'Choose future form: “She ___ tomorrow.”', options: ['will go', 'goes', 'went', 'going'], answer: 'will go' }
+    ]
+  },
+  russian: {
+    basic: [
+      { question: 'Привет = ?', options: ['Salom', 'Yaxshi', 'Maktab', 'Uy'], answer: 'Salom' },
+      { question: 'Книга = ?', options: ['Kitob', 'Dars', 'Parda', 'Maqola'], answer: 'Kitob' },
+      { question: 'Я = ?', options: ['Men', 'Sen', 'U', 'Biz'], answer: 'Men' },
+      { question: 'Дом = ?', options: ['Uy', 'Maktab', 'Daryo', 'Bog\''], answer: 'Uy' },
+      { question: 'Хорошо = ?', options: ['Yaxshi', 'Yomon', 'Tez', 'Sovuq'], answer: 'Yaxshi' },
+      { question: 'Школа = ?', options: ['Maktab', 'Bog\'', 'Ko\'cha', 'Piyoda'], answer: 'Maktab' },
+      { question: 'День = ?', options: ['Kun', 'Oqshom', 'Yil', 'Tush'], answer: 'Kun' },
+      { question: 'Стол = ?', options: ['Stol', 'Stul', 'Oyna', 'Eshik'], answer: 'Stol' },
+      { question: 'Молоко = ?', options: ['Sut', 'Yog\'', 'Un', 'Piyoz'], answer: 'Sut' },
+      { question: 'Спасибо = ?', options: ['Rahmat', 'Sizga', 'Qaytib', 'Yaxshilik'], answer: 'Rahmat' }
+    ],
+    advanced: [
+      { question: 'Я учусь в школе. Meaning?', options: ['Men maktabda o\'rganaman', 'Men uyda yashayman', 'Men ishlayman', 'Men uxlayman'], answer: 'Men maktabda o\'rganaman' },
+      { question: 'Где ты живёшь? = ?', options: ['Qayerda yashaysiz?', 'Nima qilyapsiz?', 'Qachon kelasiz?', 'Kim siz?'], answer: 'Qayerda yashaysiz?' },
+      { question: 'Сегодня холодно = ?', options: ['Bugun sovuq', 'Bugun issiq', 'Bugun yaxshi', 'Bugun marta'], answer: 'Bugun sovuq' },
+      { question: 'Моя сестра = ?', options: ['Mening singlim', 'Mening ukam', 'Mening otam', 'Mening onam'], answer: 'Mening singlim' },
+      { question: 'Они идут в школу = ?', options: ['Ular maktabga ketmoqdalar', 'Ular uydalar', 'Ular ishlaydilar', 'Ular uyquga ketishdi'], answer: 'Ular maktabga ketmoqdalar' },
+      { question: 'Я люблю читать книги = ?', options: ['Men kitob o\'qishni yaxshi ko\'raman', 'Men o\'ramayman', 'Men yozishni bilmiman', 'Men yura olmayman'], answer: 'Men kitob o\'qishni yaxshi ko\'raman' },
+      { question: 'Завтра = ?', options: ['Ertaga', 'Bugun', 'Kecha', 'Hozir'], answer: 'Ertaga' },
+      { question: 'Много = ?', options: ['Ko\'p', 'Kam', 'Yaxshi', 'Tog\'ri'], answer: 'Ko\'p' },
+      { question: 'Пожалуйста = ?', options: ['Iltimos', 'Rahmat', 'Tushuntirish', 'Salom'], answer: 'Iltimos' },
+      { question: 'Перевод: “Men ishlayman.” = ?', options: ['Я работаю', 'Я иду', 'Я ем', 'Я сплю'], answer: 'Я работаю' }
+    ]
+  },
+  iq: {
+    basic: [
+      { question: 'Agar 2 + 2 = 4 bo\'lsa, 4 + 4 = ?', options: ['6', '8', '10', '12'], answer: '8' },
+      { question: 'Qaysi son ketma-ketlikda notog\'ri: 2,4,6,8,11?', options: ['8', '6', '11', '2'], answer: '11' },
+      { question: 'Agar bola 3 ta olma oldi, 2 ta yedi, qolganlari nechta?', options: ['0', '1', '2', '3'], answer: '1' },
+      { question: 'Bir quti ichida 10 ta tugma bor. 3 ta olib ketildi. Qolganlari nechta?', options: ['6', '7', '8', '9'], answer: '7' },
+      { question: 'Qaysi rasm mantiqiy: 1,3,5,7, ?', options: ['8', '9', '10', '11'], answer: '9' },
+      { question: 'Agar A B, B C, C D bo\'lsa, eng oxirgi nima?', options: ['D', 'B', 'A', 'C'], answer: 'D' },
+      { question: 'Toping: 10, 20, 30, 40, ?', options: ['50', '45', '60', '80'], answer: '50' },
+      { question: 'Qaysi so\'z to\'g\'ri: Kichik → katta?', options: ['Katta', 'Yengil', 'Yosh', 'Sovuq'], answer: 'Katta' },
+      { question: 'Nima uchun 3 ta quyon 2 ta quyon bilan 5 bo\'ladi?', options: ['Mantiqiy', 'Qisqa', 'Aniq', 'Bunday yo\'q'], answer: 'Mantiqiy' },
+      { question: 'Mantiqiy ketma-ketlik: 5,10,15,20, ?', options: ['25', '30', '35', '40'], answer: '25' }
+    ],
+    advanced: [
+      { question: 'Qaysi son to\'g\'ri: 2, 6, 12, 20, ?', options: ['28', '30', '32', '36'], answer: '30' },
+      { question: 'Agar har bir qadam 3 marta ortsa, 4 qadam bunda nechchi bo\'ladi?', options: ['12', '9', '16', '81'], answer: '12' },
+      { question: 'Qaysi ketma-ketlik mantiqiy: 1,4,9,16,?', options: ['25', '20', '18', '22'], answer: '25' },
+      { question: 'Bir shaxs 5 soat ishladi, 2 soat dam oldi. Jami vaqti?', options: ['7', '5', '2', '4'], answer: '7' },
+      { question: 'Agar 3 ta quti 9 kg bo\'lsa, 1 quti necha kg?', options: ['2', '3', '4', '6'], answer: '3' },
+      { question: 'Qaysi son to\'g\'ri: 7,14,21,28,?', options: ['35', '36', '42', '49'], answer: '35' },
+      { question: 'Piramida qoidasi: 1,3,6,10,?', options: ['15', '12', '14', '18'], answer: '15' },
+      { question: 'Agar barcha qo\'shuvchilar bilan 16 bo\'lsa, 4+4+4+4 = ?', options: ['16', '12', '20', '8'], answer: '16' },
+      { question: 'Nima uchun 20 dan 5 ni ayirib, 15 qoladi?', options: ['Mantiq', 'Aqldan', 'Uchun', 'Qisqa'], answer: 'Mantiq' },
+      { question: 'Qaysi raqam ketma-ketlikni to\'ldiradi: 1,2,4,8,16, ?', options: ['32', '24', '20', '18'], answer: '32' }
     ]
   }
 };
 
 const state = {
   selectedSubject: null,
-  mode: null,
-  difficulty: null,
+  selectedGrade: null,
+  selectedCount: null,
+  selectedMode: null,
   questions: [],
   round: 0,
   scores: { p1: 0, p2: 0 },
-  timer: 15,
+  timer: 25,
   timerId: null,
-  answered: { p1: false, p2: false }
+  answered: { p1: false, p2: false },
+  roundQuestions: { p1: null, p2: null }
 };
 
 const ui = {
   screens: {
     start: document.getElementById('startScreen'),
+    grade: document.getElementById('gradeScreen'),
+    count: document.getElementById('countScreen'),
     mode: document.getElementById('modeScreen'),
-    difficulty: document.getElementById('difficultyScreen'),
     game: document.getElementById('gameScreen'),
     result: document.getElementById('resultScreen')
   },
   statusText: document.getElementById('statusText'),
   subjectGrid: document.getElementById('subjectGrid'),
-  continueBtn: document.getElementById('continueToMode'),
+  continueToGrade: document.getElementById('continueToGrade'),
+  gradeGrid: document.getElementById('gradeGrid'),
+  countGrid: document.getElementById('countGrid'),
   modeGrid: document.getElementById('modeGrid'),
-  difficultyGrid: document.getElementById('difficultyGrid'),
   subjectLabel: document.getElementById('subjectLabel'),
+  gradeLabel: document.getElementById('gradeLabel'),
   roundLabel: document.getElementById('roundLabel'),
   timeLabel: document.getElementById('timeLabel'),
-  questionText: document.getElementById('questionText'),
   questionTag: document.getElementById('questionTag'),
+  questionText: document.getElementById('questionText'),
   versusBoard: document.getElementById('versusBoard'),
   winnerTitle: document.getElementById('winnerTitle'),
   finalScore: document.getElementById('finalScore'),
   resultSummary: document.getElementById('resultSummary'),
   restartBtn: document.getElementById('restartBtn')
 };
+
+function showScreen(name) {
+  Object.values(ui.screens).forEach((screen) => screen.classList.remove('active'));
+  ui.screens[name].classList.add('active');
+}
+
+function getQuestionsForGrade() {
+  const pool = questionBank[state.selectedSubject];
+  if (!pool) return [];
+  const level = Number(state.selectedGrade) <= 5 ? 'basic' : 'advanced';
+  return pool[level] || pool.basic || [];
+}
 
 function shuffle(items) {
   const arr = [...items];
@@ -185,25 +298,38 @@ function shuffle(items) {
   return arr;
 }
 
-function showScreen(name) {
-  Object.values(ui.screens).forEach((screen) => screen.classList.remove('active'));
-  ui.screens[name].classList.add('active');
+function getSubjectLabel(subject) {
+  const map = {
+    matematika: 'Matematika',
+    biologiya: 'Biologiya',
+    geografiya: 'Geografiya',
+    tarix: 'Tarix',
+    informatika: 'Informatika',
+    adabiyot: 'Adabiyot',
+    english: 'Ingliz tili',
+    russian: 'Rus tili',
+    iq: 'IQ Test'
+  };
+  return map[subject] || subject;
 }
 
-function resetSelection() {
+function resetState() {
   state.selectedSubject = null;
-  state.mode = null;
-  state.difficulty = null;
+  state.selectedGrade = null;
+  state.selectedCount = null;
+  state.selectedMode = null;
   state.questions = [];
   state.round = 0;
+  state.roundQuestions = { p1: null, p2: null };
   state.scores = { p1: 0, p2: 0 };
   state.answered = { p1: false, p2: false };
   clearTimer();
   ui.statusText.textContent = 'Fan tanlang';
-  ui.continueBtn.disabled = true;
+  ui.continueToGrade.disabled = true;
   ui.subjectGrid.querySelectorAll('.choice-btn').forEach((btn) => btn.classList.remove('selected'));
+  ui.gradeGrid.querySelectorAll('.choice-btn').forEach((btn) => btn.classList.remove('selected'));
+  ui.countGrid.querySelectorAll('.choice-btn').forEach((btn) => btn.classList.remove('selected'));
   ui.modeGrid.querySelectorAll('.choice-btn').forEach((btn) => btn.classList.remove('selected'));
-  ui.difficultyGrid.querySelectorAll('.choice-btn').forEach((btn) => btn.classList.remove('selected'));
 }
 
 function selectSubject(subject) {
@@ -211,39 +337,156 @@ function selectSubject(subject) {
   ui.subjectGrid.querySelectorAll('.choice-btn').forEach((btn) => {
     btn.classList.toggle('selected', btn.dataset.subject === subject);
   });
-  ui.continueBtn.disabled = false;
-  ui.statusText.textContent = `Fan: ${subject}`;
+  ui.continueToGrade.disabled = false;
+  ui.statusText.textContent = `Fan: ${getSubjectLabel(subject)}`;
+}
+
+function selectGrade(grade) {
+  state.selectedGrade = Number(grade);
+  ui.gradeGrid.querySelectorAll('.choice-btn').forEach((btn) => {
+    btn.classList.toggle('selected', Number(btn.dataset.grade) === state.selectedGrade);
+  });
+  ui.statusText.textContent = `${getSubjectLabel(state.selectedSubject)} • ${state.selectedGrade}-sinf`;
+  showScreen('count');
+}
+
+function selectCount(count) {
+  state.selectedCount = Number(count);
+  ui.countGrid.querySelectorAll('.choice-btn').forEach((btn) => {
+    btn.classList.toggle('selected', Number(btn.dataset.count) === state.selectedCount);
+  });
+  ui.statusText.textContent = `${getSubjectLabel(state.selectedSubject)} • ${state.selectedGrade}-sinf • ${state.selectedCount} ta`;
+  showScreen('mode');
 }
 
 function selectMode(mode) {
-  state.mode = mode;
+  state.selectedMode = mode;
   ui.modeGrid.querySelectorAll('.choice-btn').forEach((btn) => {
     btn.classList.toggle('selected', btn.dataset.mode === mode);
-  });
-  ui.statusText.textContent = mode === 'ai' ? 'VS AI' : 'VS Player';
-  showScreen('difficulty');
-}
-
-function selectDifficulty(level) {
-  state.difficulty = level;
-  ui.difficultyGrid.querySelectorAll('.choice-btn').forEach((btn) => {
-    btn.classList.toggle('selected', btn.dataset.difficulty === level);
   });
   startGame();
 }
 
 function startGame() {
-  if (!state.selectedSubject || !state.mode || !state.difficulty) return;
+  if (!state.selectedSubject || !state.selectedGrade || !state.selectedCount || !state.selectedMode) return;
 
-  const pool = questionBank[state.selectedSubject][state.difficulty];
-  state.questions = shuffle(pool).slice(0, 5);
+  const basePool = shuffle(getQuestionsForGrade());
+  const count = Math.min(state.selectedCount, basePool.length);
+  state.questions = basePool.slice(0, count);
   state.round = 0;
   state.scores = { p1: 0, p2: 0 };
   state.answered = { p1: false, p2: false };
-  ui.subjectLabel.textContent = state.selectedSubject;
-  ui.statusText.textContent = `${state.selectedSubject} • ${state.difficulty}`;
+  state.roundQuestions = { p1: null, p2: null };
+
+  ui.subjectLabel.textContent = getSubjectLabel(state.selectedSubject);
+  ui.gradeLabel.textContent = `${state.selectedGrade}-sinf`;
   showScreen('game');
-  renderQuestion();
+  renderRound();
+}
+
+function renderRound() {
+  const total = state.questions.length;
+  const questionPool = state.questions;
+
+  if (state.round >= total) {
+    finishGame();
+    return;
+  }
+
+  ui.roundLabel.textContent = `${state.round + 1} / ${total}`;
+
+  if (state.selectedMode === 'ai') {
+    state.roundQuestions.p1 = questionPool[state.round];
+    state.roundQuestions.p2 = null;
+    renderBoardSingle();
+  } else {
+    let q1 = questionPool[state.round];
+    let q2 = questionPool[(state.round + 1) % total] || questionPool[0];
+    if (q2 === q1 && total > 1) {
+      q2 = questionPool[(state.round + 2) % total] || questionPool[0];
+    }
+    state.roundQuestions.p1 = q1;
+    state.roundQuestions.p2 = q2;
+    renderBoardDual();
+  }
+
+  state.answered = { p1: false, p2: false };
+  startTimer();
+}
+
+function renderBoardSingle() {
+  const board = ui.versusBoard;
+  board.innerHTML = '';
+  board.classList.add('single');
+  board.classList.remove('dual');
+
+  const panel = document.createElement('div');
+  panel.className = 'player-panel';
+
+  const title = document.createElement('h3');
+  title.textContent = '1-player';
+  panel.appendChild(title);
+
+  const q = document.createElement('div');
+  q.className = 'question-mini';
+  q.textContent = state.roundQuestions.p1.question;
+  panel.appendChild(q);
+
+  const list = document.createElement('div');
+  list.className = 'option-list';
+
+  state.roundQuestions.p1.options.forEach((option) => {
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'option-btn';
+    btn.textContent = option;
+    btn.dataset.player = 'p1';
+    btn.dataset.value = option;
+    btn.addEventListener('click', () => handleChoice('p1', option));
+    list.appendChild(btn);
+  });
+
+  panel.appendChild(list);
+  board.appendChild(panel);
+}
+
+function renderBoardDual() {
+  const board = ui.versusBoard;
+  board.innerHTML = '';
+  board.classList.remove('single');
+  board.classList.add('dual');
+
+  ['p1', 'p2'].forEach((playerKey) => {
+    const question = state.roundQuestions[playerKey];
+    const panel = document.createElement('div');
+    panel.className = 'player-panel';
+
+    const title = document.createElement('h3');
+    title.textContent = playerKey === 'p1' ? '1-player' : '2-player';
+    panel.appendChild(title);
+
+    const qText = document.createElement('div');
+    qText.className = 'question-mini';
+    qText.textContent = question.question;
+    panel.appendChild(qText);
+
+    const list = document.createElement('div');
+    list.className = 'option-list';
+
+    question.options.forEach((option) => {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'option-btn';
+      btn.textContent = option;
+      btn.dataset.player = playerKey;
+      btn.dataset.value = option;
+      btn.addEventListener('click', () => handleChoice(playerKey, option));
+      list.appendChild(btn);
+    });
+
+    panel.appendChild(list);
+    board.appendChild(panel);
+  });
 }
 
 function clearTimer() {
@@ -255,7 +498,7 @@ function clearTimer() {
 
 function startTimer() {
   clearTimer();
-  state.timer = 15;
+  state.timer = 25;
   ui.timeLabel.textContent = String(state.timer);
 
   state.timerId = setInterval(() => {
@@ -264,87 +507,45 @@ function startTimer() {
 
     if (state.timer <= 0) {
       clearTimer();
-      if (state.mode === 'ai') {
-        handleAiTimeout();
+      if (state.selectedMode === 'ai') {
+        autoFinishSingle();
       } else {
-        handlePlayerTimeout();
+        if (!state.answered.p1) autoAnswerPlayer('p1');
+        if (!state.answered.p2) autoAnswerPlayer('p2');
+        setTimeout(() => {
+          revealRoundAnswers();
+          finishRound();
+        }, 800);
       }
     }
   }, 1000);
 }
 
 function getAiAnswer(question) {
+  if (!question) return null;
   const wrongOptions = question.options.filter((option) => option !== question.answer);
-  const chance = Math.random();
-
-  if (chance < 0.7) {
-    return question.answer;
-  }
-
-  return wrongOptions[Math.floor(Math.random() * wrongOptions.length)];
+  return Math.random() < 0.7 ? question.answer : wrongOptions[Math.floor(Math.random() * wrongOptions.length)];
 }
 
-function renderQuestion() {
-  const current = state.questions[state.round];
-  const total = state.questions.length;
-
-  ui.roundLabel.textContent = `${state.round + 1} / ${total}`;
-  ui.questionTag.textContent = `Savol ${state.round + 1}`;
-  ui.questionText.textContent = current.question;
-
-  const board = ui.versusBoard;
-  board.innerHTML = '';
-  board.classList.toggle('single', state.mode === 'ai');
-
-  const panels = state.mode === 'ai'
-    ? [{ label: '1-player', key: 'p1' }]
-    : [{ label: '1-player', key: 'p1' }, { label: '2-player', key: 'p2' }];
-
-  panels.forEach(({ label, key }) => {
-    const panel = document.createElement('div');
-    panel.className = 'player-panel';
-
-    const heading = document.createElement('h3');
-    heading.textContent = label;
-    panel.appendChild(heading);
-
-    const list = document.createElement('div');
-    list.className = 'option-list';
-
-    current.options.forEach((option) => {
-      const btn = document.createElement('button');
-      btn.type = 'button';
-      btn.className = 'option-btn';
-      btn.textContent = option;
-      btn.dataset.player = key;
-      btn.dataset.value = option;
-      btn.addEventListener('click', () => handleChoice(key, option));
-      list.appendChild(btn);
-    });
-
-    panel.appendChild(list);
-    board.appendChild(panel);
-  });
-
-  state.answered = { p1: false, p2: false };
-  startTimer();
+function autoAnswerPlayer(playerKey) {
+  if (state.answered[playerKey]) return;
+  const question = state.roundQuestions[playerKey];
+  handleChoice(playerKey, getAiAnswer(question), true);
 }
 
-function handleChoice(playerKey, selectedValue) {
+function handleChoice(playerKey, selectedValue, isAuto = false) {
   if (state.answered[playerKey]) return;
 
-  const current = state.questions[state.round];
+  const current = state.roundQuestions[playerKey];
   const correct = selectedValue === current.answer;
   state.answered[playerKey] = true;
 
   const buttons = document.querySelectorAll(`.option-btn[data-player="${playerKey}"]`);
   buttons.forEach((btn) => {
     btn.disabled = true;
-
-    if (btn.dataset.value === current.answer) {
+    if (btn.dataset.value === selectedValue && correct) {
       btn.classList.add('correct');
     }
-
     if (btn.dataset.value === selectedValue && !correct) {
       btn.classList.add('wrong');
     }
@@ -354,102 +555,60 @@ function handleChoice(playerKey, selectedValue) {
     state.scores[playerKey] += 10;
   }
 
-  if (state.mode === 'ai') {
-    setTimeout(() => finishRound(), 850);
+  if (state.selectedMode === 'ai') {
+    autoFinishSingle();
     return;
   }
 
   if (state.answered.p1 && state.answered.p2) {
-    setTimeout(() => finishRound(), 850);
+    revealRoundAnswers();
+    setTimeout(() => finishRound(), 900);
   }
 }
 
-function handlePlayerTimeout() {
-  const current = state.questions[state.round];
-  const playerButtons = document.querySelectorAll('.option-btn[data-player="p1"]');
-  const player2Buttons = document.querySelectorAll('.option-btn[data-player="p2"]');
-
-  if (!state.answered.p1) {
-    const fallback = current.answer;
-    state.answered.p1 = true;
-    playerButtons.forEach((btn) => {
-      btn.disabled = true;
-      if (btn.dataset.value === current.answer) {
-        btn.classList.add('correct');
-      }
-    });
-    state.scores.p1 += 10;
-  }
-
-  if (!state.answered.p2) {
-    const chosen = getAiAnswer(current);
-    state.answered.p2 = true;
-    player2Buttons.forEach((btn) => {
-      btn.disabled = true;
-      if (btn.dataset.value === current.answer) {
-        btn.classList.add('correct');
-      }
-      if (btn.dataset.value === chosen && chosen !== current.answer) {
-        btn.classList.add('wrong');
-      }
-    });
-    if (chosen === current.answer) {
-      state.scores.p2 += 10;
-    }
-  }
-
-  setTimeout(() => finishRound(), 850);
+function autoFinishSingle() {
+  clearTimer();
+  revealRoundAnswers();
+  setTimeout(() => finishRound(), 900);
 }
 
-function handleAiTimeout() {
-  const current = state.questions[state.round];
-  const buttons = document.querySelectorAll('.option-btn[data-player="p1"]');
+function revealRoundAnswers() {
+  document.querySelectorAll('.option-btn').forEach((btn) => {
+    const playerKey = btn.dataset.player;
+    const question = state.roundQuestions[playerKey];
+    if (!question) return;
 
-  if (!state.answered.p1) {
-    const autoChoice = getAiAnswer(current);
-    state.answered.p1 = true;
-    buttons.forEach((btn) => {
-      btn.disabled = true;
-      if (btn.dataset.value === current.answer) {
-        btn.classList.add('correct');
-      }
-      if (btn.dataset.value === autoChoice && autoChoice !== current.answer) {
-        btn.classList.add('wrong');
-      }
-    });
-    if (autoChoice === current.answer) {
-      state.scores.p1 += 10;
+    btn.disabled = true;
+
+    if (btn.dataset.value === question.answer) {
+      btn.classList.add('correct');
+      btn.classList.remove('wrong');
     }
-  }
-
-  setTimeout(() => finishRound(), 850);
+  });
 }
 
 function finishRound() {
   clearTimer();
-
   if (state.round + 1 >= state.questions.length) {
     finishGame();
     return;
   }
-
   state.round += 1;
-  renderQuestion();
+  renderRound();
 }
 
 function finishGame() {
   clearTimer();
-
   const p1 = state.scores.p1;
   const p2 = state.scores.p2;
 
   let winnerText = 'Durrang!';
   if (p1 > p2) winnerText = '1-player yutdi!';
-  else if (p2 > p1) winnerText = state.mode === 'ai' ? 'AI yutdi!' : '2-player yutdi!';
+  else if (p2 > p1) winnerText = state.selectedMode === 'ai' ? 'AI yutdi!' : '2-player yutdi!';
 
   ui.winnerTitle.textContent = winnerText;
   ui.finalScore.textContent = `${p1} - ${p2}`;
-  ui.resultSummary.textContent = `${state.selectedSubject.toUpperCase()} • ${state.difficulty.toUpperCase()} • ${state.mode === 'ai' ? 'VS AI' : 'VS Player'}`;
+  ui.resultSummary.textContent = `${getSubjectLabel(state.selectedSubject)} • ${state.selectedGrade}-sinf • ${state.selectedCount} ta • ${state.selectedMode === 'ai' ? 'VS AI' : 'VS Player'}`;
   showScreen('result');
 }
 
@@ -459,9 +618,22 @@ ui.subjectGrid.addEventListener('click', (event) => {
   selectSubject(btn.dataset.subject);
 });
 
-ui.continueBtn.addEventListener('click', () => {
+ui.continueToGrade.addEventListener('click', () => {
   if (!state.selectedSubject) return;
-  showScreen('mode');
+  showScreen('grade');
+  ui.statusText.textContent = `${getSubjectLabel(state.selectedSubject)} • sinf tanlang`;
+});
+
+ui.gradeGrid.addEventListener('click', (event) => {
+  const btn = event.target.closest('[data-grade]');
+  if (!btn) return;
+  selectGrade(btn.dataset.grade);
+});
+
+ui.countGrid.addEventListener('click', (event) => {
+  const btn = event.target.closest('[data-count]');
+  if (!btn) return;
+  selectCount(btn.dataset.count);
 });
 
 ui.modeGrid.addEventListener('click', (event) => {
@@ -470,17 +642,11 @@ ui.modeGrid.addEventListener('click', (event) => {
   selectMode(btn.dataset.mode);
 });
 
-ui.difficultyGrid.addEventListener('click', (event) => {
-  const btn = event.target.closest('[data-difficulty]');
-  if (!btn) return;
-  selectDifficulty(btn.dataset.difficulty);
-});
-
 ui.restartBtn.addEventListener('click', () => {
-  resetSelection();
+  resetState();
   showScreen('start');
 });
 
-resetSelection();
+resetState();
 showScreen('start');
 window.addEventListener('beforeunload', clearTimer);
