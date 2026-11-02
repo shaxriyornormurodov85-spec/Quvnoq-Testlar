@@ -237,9 +237,8 @@ const questionBank = {
 
 const state = {
   selectedSubject: null,
-  selectedGrade: null,
-  selectedCount: null,
   selectedMode: null,
+  selectedDifficulty: null,
   questions: [],
   round: 0,
   scores: { p1: 0, p2: 0 },
@@ -252,24 +251,19 @@ const state = {
 const ui = {
   screens: {
     start: document.getElementById('startScreen'),
-    grade: document.getElementById('gradeScreen'),
-    count: document.getElementById('countScreen'),
     mode: document.getElementById('modeScreen'),
+    difficulty: document.getElementById('difficultyScreen'),
     game: document.getElementById('gameScreen'),
     result: document.getElementById('resultScreen')
   },
   statusText: document.getElementById('statusText'),
   subjectGrid: document.getElementById('subjectGrid'),
-  continueToGrade: document.getElementById('continueToGrade'),
-  gradeGrid: document.getElementById('gradeGrid'),
-  countGrid: document.getElementById('countGrid'),
+  continueToMode: document.getElementById('continueToMode'),
   modeGrid: document.getElementById('modeGrid'),
+  difficultyGrid: document.getElementById('difficultyGrid'),
   subjectLabel: document.getElementById('subjectLabel'),
-  gradeLabel: document.getElementById('gradeLabel'),
   roundLabel: document.getElementById('roundLabel'),
   timeLabel: document.getElementById('timeLabel'),
-  questionTag: document.getElementById('questionTag'),
-  questionText: document.getElementById('questionText'),
   versusBoard: document.getElementById('versusBoard'),
   winnerTitle: document.getElementById('winnerTitle'),
   finalScore: document.getElementById('finalScore'),
@@ -280,22 +274,6 @@ const ui = {
 function showScreen(name) {
   Object.values(ui.screens).forEach((screen) => screen.classList.remove('active'));
   ui.screens[name].classList.add('active');
-}
-
-function getQuestionsForGrade() {
-  const pool = questionBank[state.selectedSubject];
-  if (!pool) return [];
-  const level = Number(state.selectedGrade) <= 5 ? 'basic' : 'advanced';
-  return pool[level] || pool.basic || [];
-}
-
-function shuffle(items) {
-  const arr = [...items];
-  for (let i = arr.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [arr[i], arr[j]] = [arr[j], arr[i]];
-  }
-  return arr;
 }
 
 function getSubjectLabel(subject) {
@@ -313,23 +291,48 @@ function getSubjectLabel(subject) {
   return map[subject] || subject;
 }
 
+function getQuestionsForDifficulty() {
+  const pool = questionBank[state.selectedSubject];
+  if (!pool) return [];
+
+  switch (state.selectedDifficulty) {
+    case 'oson':
+      return pool.basic || [];
+    case 'orta':
+      return (pool.advanced && pool.advanced.length ? pool.advanced : pool.basic) || [];
+    case 'qiyin':
+      return pool.advanced || pool.basic || [];
+    default:
+      return pool.basic || [];
+  }
+}
+
+function shuffle(items) {
+  const arr = [...items];
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
 function resetState() {
   state.selectedSubject = null;
-  state.selectedGrade = null;
-  state.selectedCount = null;
   state.selectedMode = null;
+  state.selectedDifficulty = null;
   state.questions = [];
   state.round = 0;
-  state.roundQuestions = { p1: null, p2: null };
   state.scores = { p1: 0, p2: 0 };
   state.answered = { p1: false, p2: false };
+  state.roundQuestions = { p1: null, p2: null };
   clearTimer();
+
   ui.statusText.textContent = 'Fan tanlang';
-  ui.continueToGrade.disabled = true;
+  ui.continueToMode.disabled = true;
+
   ui.subjectGrid.querySelectorAll('.choice-btn').forEach((btn) => btn.classList.remove('selected'));
-  ui.gradeGrid.querySelectorAll('.choice-btn').forEach((btn) => btn.classList.remove('selected'));
-  ui.countGrid.querySelectorAll('.choice-btn').forEach((btn) => btn.classList.remove('selected'));
   ui.modeGrid.querySelectorAll('.choice-btn').forEach((btn) => btn.classList.remove('selected'));
+  ui.difficultyGrid.querySelectorAll('.choice-btn').forEach((btn) => btn.classList.remove('selected'));
 }
 
 function selectSubject(subject) {
@@ -337,26 +340,8 @@ function selectSubject(subject) {
   ui.subjectGrid.querySelectorAll('.choice-btn').forEach((btn) => {
     btn.classList.toggle('selected', btn.dataset.subject === subject);
   });
-  ui.continueToGrade.disabled = false;
+  ui.continueToMode.disabled = false;
   ui.statusText.textContent = `Fan: ${getSubjectLabel(subject)}`;
-}
-
-function selectGrade(grade) {
-  state.selectedGrade = Number(grade);
-  ui.gradeGrid.querySelectorAll('.choice-btn').forEach((btn) => {
-    btn.classList.toggle('selected', Number(btn.dataset.grade) === state.selectedGrade);
-  });
-  ui.statusText.textContent = `${getSubjectLabel(state.selectedSubject)} • ${state.selectedGrade}-sinf`;
-  showScreen('count');
-}
-
-function selectCount(count) {
-  state.selectedCount = Number(count);
-  ui.countGrid.querySelectorAll('.choice-btn').forEach((btn) => {
-    btn.classList.toggle('selected', Number(btn.dataset.count) === state.selectedCount);
-  });
-  ui.statusText.textContent = `${getSubjectLabel(state.selectedSubject)} • ${state.selectedGrade}-sinf • ${state.selectedCount} ta`;
-  showScreen('mode');
 }
 
 function selectMode(mode) {
@@ -364,14 +349,23 @@ function selectMode(mode) {
   ui.modeGrid.querySelectorAll('.choice-btn').forEach((btn) => {
     btn.classList.toggle('selected', btn.dataset.mode === mode);
   });
+  ui.statusText.textContent = `${getSubjectLabel(state.selectedSubject)} • ${mode === 'ai' ? 'VS AI' : 'VS Player'}`;
+  showScreen('difficulty');
+}
+
+function selectDifficulty(level) {
+  state.selectedDifficulty = level;
+  ui.difficultyGrid.querySelectorAll('.choice-btn').forEach((btn) => {
+    btn.classList.toggle('selected', btn.dataset.difficulty === level);
+  });
   startGame();
 }
 
 function startGame() {
-  if (!state.selectedSubject || !state.selectedGrade || !state.selectedCount || !state.selectedMode) return;
+  if (!state.selectedSubject || !state.selectedMode || !state.selectedDifficulty) return;
 
-  const basePool = shuffle(getQuestionsForGrade());
-  const count = Math.min(state.selectedCount, basePool.length);
+  const basePool = shuffle(getQuestionsForDifficulty());
+  const count = Math.min(5, basePool.length);
   state.questions = basePool.slice(0, count);
   state.round = 0;
   state.scores = { p1: 0, p2: 0 };
@@ -379,7 +373,7 @@ function startGame() {
   state.roundQuestions = { p1: null, p2: null };
 
   ui.subjectLabel.textContent = getSubjectLabel(state.selectedSubject);
-  ui.gradeLabel.textContent = `${state.selectedGrade}-sinf`;
+  ui.statusText.textContent = `${getSubjectLabel(state.selectedSubject)} • ${state.selectedMode === 'ai' ? 'VS AI' : 'VS Player'} • ${state.selectedDifficulty}`;
   showScreen('game');
   renderRound();
 }
@@ -507,6 +501,7 @@ function startTimer() {
 
     if (state.timer <= 0) {
       clearTimer();
+
       if (state.selectedMode === 'ai') {
         autoFinishSingle();
       } else {
@@ -593,6 +588,7 @@ function finishRound() {
     finishGame();
     return;
   }
+
   state.round += 1;
   renderRound();
 }
@@ -608,7 +604,7 @@ function finishGame() {
 
   ui.winnerTitle.textContent = winnerText;
   ui.finalScore.textContent = `${p1} - ${p2}`;
-  ui.resultSummary.textContent = `${getSubjectLabel(state.selectedSubject)} • ${state.selectedGrade}-sinf • ${state.selectedCount} ta • ${state.selectedMode === 'ai' ? 'VS AI' : 'VS Player'}`;
+  ui.resultSummary.textContent = `${getSubjectLabel(state.selectedSubject)} • ${state.selectedDifficulty} • ${state.selectedMode === 'ai' ? 'VS AI' : 'VS Player'} • ${state.questions.length} ta`;
   showScreen('result');
 }
 
@@ -618,28 +614,22 @@ ui.subjectGrid.addEventListener('click', (event) => {
   selectSubject(btn.dataset.subject);
 });
 
-ui.continueToGrade.addEventListener('click', () => {
+ui.continueToMode.addEventListener('click', () => {
   if (!state.selectedSubject) return;
-  showScreen('grade');
-  ui.statusText.textContent = `${getSubjectLabel(state.selectedSubject)} • sinf tanlang`;
-});
-
-ui.gradeGrid.addEventListener('click', (event) => {
-  const btn = event.target.closest('[data-grade]');
-  if (!btn) return;
-  selectGrade(btn.dataset.grade);
-});
-
-ui.countGrid.addEventListener('click', (event) => {
-  const btn = event.target.closest('[data-count]');
-  if (!btn) return;
-  selectCount(btn.dataset.count);
+  showScreen('mode');
+  ui.statusText.textContent = `${getSubjectLabel(state.selectedSubject)} • o'yin turini tanlang`;
 });
 
 ui.modeGrid.addEventListener('click', (event) => {
   const btn = event.target.closest('[data-mode]');
   if (!btn) return;
   selectMode(btn.dataset.mode);
+});
+
+ui.difficultyGrid.addEventListener('click', (event) => {
+  const btn = event.target.closest('[data-difficulty]');
+  if (!btn) return;
+  selectDifficulty(btn.dataset.difficulty);
 });
 
 ui.restartBtn.addEventListener('click', () => {
