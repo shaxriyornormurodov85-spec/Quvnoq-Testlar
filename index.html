@@ -35,7 +35,37 @@
             </div>
 
             <div class="action-row">
-              <button id="continueToMode" class="primary-btn" disabled>Keyingisi</button>
+              <button id="continueToGrade" class="primary-btn" disabled>Keyingisi</button>
+            </div>
+          </div>
+        </section>
+
+        <section id="gradeScreen" class="screen">
+          <div class="panel intro-panel">
+            <p class="eyebrow">Sinf</p>
+            <h2>Sinfni tanlang</h2>
+            <div class="choice-grid wide" id="gradeGrid">
+              <button class="choice-btn grade-btn" data-grade="5">1-5 sinf</button>
+              <button class="choice-btn grade-btn" data-grade="8">6-8 sinf</button>
+              <button class="choice-btn grade-btn" data-grade="11">9-11 sinf</button>
+            </div>
+            <div class="action-row">
+              <button id="continueToCount" class="primary-btn" disabled>Davom etish</button>
+            </div>
+          </div>
+        </section>
+
+        <section id="countScreen" class="screen">
+          <div class="panel intro-panel">
+            <p class="eyebrow">Savollar</p>
+            <h2>Savol sonini tanlang</h2>
+            <div class="choice-grid wide" id="countGrid">
+              <button class="choice-btn count-btn" data-count="5">5 ta</button>
+              <button class="choice-btn count-btn" data-count="10">10 ta</button>
+              <button class="choice-btn count-btn" data-count="15">15 ta</button>
+            </div>
+            <div class="action-row">
+              <button id="continueToMode" class="primary-btn" disabled>Davom etish</button>
             </div>
           </div>
         </section>
@@ -47,6 +77,9 @@
             <div class="choice-grid wide" id="modeGrid">
               <button class="choice-btn mode-btn" data-mode="ai">VS AI</button>
               <button class="choice-btn mode-btn" data-mode="player">VS Player</button>
+            </div>
+            <div class="action-row">
+              <button id="continueToDifficulty" class="primary-btn" disabled>Davom etish</button>
             </div>
           </div>
         </section>
