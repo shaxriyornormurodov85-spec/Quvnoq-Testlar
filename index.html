@@ -12,16 +12,12 @@
         <div class="brand">Quvnoq Testlar</div>
         <div class="status" id="statusText">Fan tanlang</div>
       </header>
-
       <main>
         <section id="startScreen" class="screen active">
           <div class="panel intro-panel">
             <p class="eyebrow">Katta ekranli o'yin</p>
             <h1>Bilimlar musobaqasi</h1>
-            <p class="subtitle">
-              Fanlarni tanlang, o'yin turini belgilang va raqobatga tayyor bo'ling.
-            </p>
-
+            <p class="subtitle">Fanlarni tanlang, o'yin turini belgilang va raqobatga tayyor bo'ling.</p>
             <div class="section-block">
               <h3>Fan tanlang</h3>
               <div class="choice-grid" id="subjectGrid">
@@ -33,61 +29,44 @@
                 <button class="choice-btn" data-subject="iq">IQ Test</button>
               </div>
             </div>
-
-            <div class="action-row">
-              <button id="continueToGrade" class="primary-btn" disabled>Keyingisi</button>
-            </div>
+            <div class="action-row"><button id="continueToGrade" class="primary-btn" disabled>Keyingisi</button></div>
           </div>
         </section>
-
         <section id="gradeScreen" class="screen">
           <div class="panel intro-panel">
-            <p class="eyebrow">Sinf</p>
-            <h2>Sinfni tanlang</h2>
+            <p class="eyebrow">Sinf</p><h2>Sinfni tanlang</h2>
             <div class="choice-grid wide" id="gradeGrid">
               <button class="choice-btn grade-btn" data-grade="5">1-5 sinf</button>
               <button class="choice-btn grade-btn" data-grade="8">6-8 sinf</button>
               <button class="choice-btn grade-btn" data-grade="11">9-11 sinf</button>
             </div>
-            <div class="action-row">
-              <button id="continueToCount" class="primary-btn" disabled>Davom etish</button>
-            </div>
+            <div class="action-row"><button id="continueToCount" class="primary-btn" disabled>Davom etish</button></div>
           </div>
         </section>
-
         <section id="countScreen" class="screen">
           <div class="panel intro-panel">
-            <p class="eyebrow">Savollar</p>
-            <h2>Savol sonini tanlang</h2>
+            <p class="eyebrow">Savollar</p><h2>Savol sonini tanlang</h2>
             <div class="choice-grid wide" id="countGrid">
               <button class="choice-btn count-btn" data-count="5">5 ta</button>
               <button class="choice-btn count-btn" data-count="10">10 ta</button>
               <button class="choice-btn count-btn" data-count="15">15 ta</button>
             </div>
-            <div class="action-row">
-              <button id="continueToMode" class="primary-btn" disabled>Davom etish</button>
-            </div>
+            <div class="action-row"><button id="continueToMode" class="primary-btn" disabled>Davom etish</button></div>
           </div>
         </section>
-
         <section id="modeScreen" class="screen">
           <div class="panel intro-panel">
-            <p class="eyebrow">O'yin turi</p>
-            <h2>VS AI yoki VS Player?</h2>
+            <p class="eyebrow">O'yin turi</p><h2>VS AI yoki VS Player?</h2>
             <div class="choice-grid wide" id="modeGrid">
               <button class="choice-btn mode-btn" data-mode="ai">VS AI</button>
               <button class="choice-btn mode-btn" data-mode="player">VS Player</button>
             </div>
-            <div class="action-row">
-              <button id="continueToDifficulty" class="primary-btn" disabled>Davom etish</button>
-            </div>
+            <div class="action-row"><button id="continueToDifficulty" class="primary-btn" disabled>Davom etish</button></div>
           </div>
         </section>
-
         <section id="difficultyScreen" class="screen">
           <div class="panel intro-panel">
-            <p class="eyebrow">Qiyinchilik</p>
-            <h2>Darajani tanlang</h2>
+            <p class="eyebrow">Qiyinchilik</p><h2>Darajani tanlang</h2>
             <div class="choice-grid wide" id="difficultyGrid">
               <button class="choice-btn difficulty-btn" data-difficulty="oson">Oson</button>
               <button class="choice-btn difficulty-btn" data-difficulty="orta">O'rta</button>
@@ -95,37 +74,20 @@
             </div>
           </div>
         </section>
-
         <section id="gameScreen" class="screen">
           <div class="panel game-panel">
             <div class="hud">
-              <div class="hud-item">
-                <span>Fan</span>
-                <strong id="subjectLabel">Matematika</strong>
-              </div>
-              <div class="hud-item">
-                <span>Round</span>
-                <strong id="roundLabel">1 / 5</strong>
-              </div>
-              <div class="hud-item">
-                <span>Vaqt</span>
-                <strong id="timeLabel">15</strong>
-              </div>
+              <div class="hud-item"><span>Fan</span><strong id="subjectLabel">Matematika</strong></div>
+              <div class="hud-item"><span>Round</span><strong id="roundLabel">1 / 5</strong></div>
+              <div class="hud-item"><span>Vaqt</span><strong id="timeLabel">15</strong></div>
             </div>
-
-            <div class="question-card">
-              <p class="question-tag" id="questionTag">Savol</p>
-              <h2 id="questionText">Savol matni</h2>
-            </div>
-
+            <div class="question-card"><p class="question-tag" id="questionTag">Savol</p><h2 id="questionText">Savol matni</h2></div>
             <div class="versus-board" id="versusBoard"></div>
           </div>
         </section>
-
         <section id="resultScreen" class="screen">
           <div class="panel result-panel">
-            <p class="eyebrow">Natija</p>
-            <h2 id="winnerTitle">Natija</h2>
+            <p class="eyebrow">Natija</p><h2 id="winnerTitle">Natija</h2>
             <div class="final-score" id="finalScore">0 - 0</div>
             <div class="result-text" id="resultSummary">Savollar yakunlandi.</div>
             <button id="restartBtn" class="primary-btn">Yana o'ynash</button>
@@ -133,8 +95,8 @@
         </section>
       </main>
     </div>
-
     <script src="script.js"></script>
     <script src="flow-fix.js"></script>
+    <script src="grade-questions.js"></script>
   </body>
 </html>
