@@ -4,12 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quvnoq Testlar</title>
-    <link rel="stylesheet" href="style.css?v=20261109-center-start" />
+    <link rel="stylesheet" href="style.css?v=20261109-fix2" />
   </head>
   <body>
     <div class="app-shell">
       <header class="topbar">
-        <div class="brand"><span class="brand-mark" aria-hidden="true"></span><span>Quvnoq Testlar</span></div>
+        <div class="brand">Quvnoq Testlar</div>
         <div class="status" id="statusText">Fan tanlang</div>
       </header>
       <main>
@@ -29,20 +29,24 @@
                 <button class="choice-btn" data-subject="iq">IQ Test</button>
               </div>
             </div>
-            <div class="action-row"><button id="continueToGrade" class="primary-btn" disabled>Keyingisi</button></div>
+            <div class="action-row">
+              <button id="continueToGrade" class="primary-btn" disabled>Keyingisi</button>
+            </div>
           </div>
         </section>
+
         <section id="gradeScreen" class="screen">
           <div class="panel intro-panel">
             <p class="eyebrow">Sinf</p><h2>Sinfni tanlang</h2>
             <div class="choice-grid wide" id="gradeGrid">
-              <button class="choice-btn grade-btn" data-grade="5">1-5 sinf</button>
-              <button class="choice-btn grade-btn" data-grade="8">6-8 sinf</button>
-              <button class="choice-btn grade-btn" data-grade="11">9-11 sinf</button>
+              <button class="choice-btn grade-btn" data-grade="5">1–5 sinf</button>
+              <button class="choice-btn grade-btn" data-grade="8">6–8 sinf</button>
+              <button class="choice-btn grade-btn" data-grade="11">9–11 sinf</button>
             </div>
             <div class="action-row"><button id="continueToCount" class="primary-btn" disabled>Davom etish</button></div>
           </div>
         </section>
+
         <section id="countScreen" class="screen">
           <div class="panel intro-panel">
             <p class="eyebrow">Savollar</p><h2>Savol sonini tanlang</h2>
@@ -54,6 +58,7 @@
             <div class="action-row"><button id="continueToMode" class="primary-btn" disabled>Davom etish</button></div>
           </div>
         </section>
+
         <section id="modeScreen" class="screen">
           <div class="panel intro-panel">
             <p class="eyebrow">O'yin turi</p><h2>VS AI yoki VS Player?</h2>
@@ -64,6 +69,7 @@
             <div class="action-row"><button id="continueToDifficulty" class="primary-btn" disabled>Davom etish</button></div>
           </div>
         </section>
+
         <section id="difficultyScreen" class="screen">
           <div class="panel intro-panel">
             <p class="eyebrow">Qiyinchilik</p><h2>Darajani tanlang</h2>
@@ -74,17 +80,22 @@
             </div>
           </div>
         </section>
+
         <section id="gameScreen" class="screen">
           <div class="panel game-panel">
             <div class="hud">
               <div class="hud-item"><span>Fan</span><strong id="subjectLabel">Matematika</strong></div>
-              <div class="hud-item"><span>Round</span><strong id="roundLabel">1 / 5</strong></div>
-              <div class="hud-item"><span>Vaqt</span><strong id="timeLabel">15</strong></div>
+              <div class="hud-item"><span>Savol</span><strong id="roundLabel">1 / 5</strong></div>
+              <div class="hud-item"><span>Vaqt</span><strong id="timeLabel">25</strong></div>
             </div>
-            <div class="question-card"><p class="question-tag" id="questionTag">Savol</p><h2 id="questionText">Savol matni</h2></div>
+            <div class="question-card">
+              <p class="question-tag" id="questionTag">Savol</p>
+              <h2 id="questionText">Savol matni</h2>
+            </div>
             <div class="versus-board" id="versusBoard"></div>
           </div>
         </section>
+
         <section id="resultScreen" class="screen">
           <div class="panel result-panel">
             <p class="eyebrow">Natija</p><h2 id="winnerTitle">Natija</h2>
@@ -95,11 +106,11 @@
         </section>
       </main>
     </div>
-    <script src="script.js?v=20261109-center-start"></script>
-    <script src="flow-fix.js?v=20261109-center-start"></script>
-    <script src="grade-questions.js?v=20261109-center-start"></script>
-    <script src="grade-level-fix.js?v=20261109-center-start"></script>
-    <script src="ai-fix.js?v=20261109-center-start"></script>
-    <script src="vs-player-turns.js?v=20261109-center-start"></script>
+    <script src="script.js?v=20261109-fix2"></script>
+    <script src="flow-fix.js?v=20261109-fix2"></script>
+    <script src="grade-questions.js?v=20261109-fix2"></script>
+    <script src="grade-level-fix.js?v=20261109-fix2"></script>
+    <script src="ai-fix.js?v=20261109-fix2"></script>
+    <script src="vs-player-turns.js?v=20261109-fix2"></script>
   </body>
 </html>
