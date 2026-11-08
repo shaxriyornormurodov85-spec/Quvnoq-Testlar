@@ -51,58 +51,6 @@ const questionBank = {
       { question: 'Qaysi organ hujayralarda ATP hosil qiladi?', options: ['Mitoxondriya', 'Yadro', 'Ribosoma', 'Lizosoma'], answer: 'Mitoxondriya' }
     ]
   },
-  geografiya: {
-    basic: [
-      { question: 'O\'zbekistonning poytaxti qaysi shahar?', options: ['Samarqand', 'Nukus', 'Toshkent', 'Buxoro'], answer: 'Toshkent' },
-      { question: 'Dunyo eng katta okeani qaysi?', options: ['Atlantika', 'Tinch okeani', 'Hind okeani', 'Shimoliy Muz okeani'], answer: 'Tinch okeani' },
-      { question: 'Qaysi qit\'ada Afrika bor?', options: ['Yevropa', 'Afrika', 'Avstraliya', 'Antarktida'], answer: 'Afrika' },
-      { question: 'Qaysi davlat "Piza minorasi" bilan tanilgan?', options: ['Italiya', 'Fransiya', 'Ispaniya', 'Germaniya'], answer: 'Italiya' },
-      { question: 'Yer yuzasidagi eng katta cho\'l qaysi?', options: ['Gobi', 'Sahara', 'Kalahari', 'Arab cho\'li'], answer: 'Sahara' },
-      { question: 'Qaysi qit\'a eng katta?', options: ['Afrika', 'Yevropa', 'Osiyo', 'Avstraliya'], answer: 'Osiyo' },
-      { question: 'Katta okean necha xil?', options: ['2', '3', '4', '5'], answer: '4' },
-      { question: 'Qaysi davlat O\'rta Osiyoda joylashgan?', options: ['Italiya', 'O\'zbekiston', 'Braziliya', 'Yaponiya'], answer: 'O\'zbekiston' },
-      { question: 'Qaysi daryo O\'zbekistonda katta?', options: ['Nil', 'Amudaryo', 'Amazonka', 'Misisipi'], answer: 'Amudaryo' },
-      { question: 'Yerning tabiiy yo\'ldoshi nima?', options: ['Oy', 'Venera', 'Mars', 'Yupiter'], answer: 'Oy' }
-    ],
-    advanced: [
-      { question: 'Qaysi cho\'l Janubiy Amerika qit\'asida joylashgan?', options: ['Sahara', 'Atakama', 'Gobi', 'Kalahari'], answer: 'Atakama' },
-      { question: 'Yevropaning eng uzun daryosi qaysi?', options: ['Dunay', 'Volga', 'Rin', 'Dnepr'], answer: 'Volga' },
-      { question: 'Qaysi mamlakatda "Eiffel minorasi" bor?', options: ['Italiya', 'Fransiya', 'Germaniya', 'Ispaniya'], answer: 'Fransiya' },
-      { question: 'Qaysi qit\'ada eng past nuqta - Yer osti cho\'li joylashgan?', options: ['Afrika', 'Avstraliya', 'Yevropa', 'Antarktida'], answer: 'Afrika' },
-      { question: 'Qaysi daryo Misrdan oqib o\'tadi?', options: ['Nil', 'Amazonka', 'Yangtze', 'Misisipi'], answer: 'Nil' },
-      { question: 'Qaysi mamlakat "Tian Shan" tog\'lari bilan tanilgan?', options: ['Qozog\'iston', 'O\'zbekiston', 'Tojikiston', 'Turkiya'], answer: 'O\'zbekiston' },
-      { question: 'Qaysi okean dengizlardan eng katta?', options: ['Atlantika', 'Tinch okeani', 'Sho\'r okean', 'Hind okeani'], answer: 'Tinch okeani' },
-      { question: 'Qaysi shahar "Yashil shahar" nomi bilan tanilgan?', options: ['Toshkent', 'Dubay', 'Singapur', 'Kuala Lumpur'], answer: 'Singapur' },
-      { question: 'Qaysi davlatning qirg\'og\'i ko\'p?', options: ['Rossiya', 'Yaponiya', 'Braziliya', 'Germaniya'], answer: 'Rossiya' },
-      { question: 'Qaysi qit\'ada eng yirik cho\'l bor?', options: ['Afrika', 'Avstraliya', 'Yevropa', 'Antarktida'], answer: 'Afrika' }
-    ]
-  },
-  tarix: {
-    basic: [
-      { question: 'O\'zbekiston mustaqillik kunini qaysi yilda oldi?', options: ['1990', '1991', '1992', '1995'], answer: '1991' },
-      { question: 'Qaysi shahar "Sharqning go\'zal shahri" deb ataladi?', options: ['Samarqand', 'Buxoro', 'Toshkent', 'Xiva'], answer: 'Samarqand' },
-      { question: 'Qaysi shaxs "Buxoroi sharif" nomi bilan tanilgan?', options: ['Amir Temur', 'Bobur', 'Ulug\'bek', 'Alisher Navoiy'], answer: 'Amir Temur' },
-      { question: 'Buvi qaysi davrga tegishli?', options: ['O\'rta asr', 'Zamon', 'Neolit', 'Yangi asr'], answer: 'O\'rta asr' },
-      { question: 'Qaysi hukmdor Samarqandni poytaxt qildi?', options: ['Amir Temur', 'Bobur', 'Ulug\'bek', 'Temur Malik'], answer: 'Amir Temur' },
-      { question: 'Qaysi yilga qadar O\'zbekiston mustaqil bo\'ldi?', options: ['1990', '1991', '1992', '1994'], answer: '1991' },
-      { question: 'Qaysi sharafiga O\'zbekiston nomi berilgan?', options: ['Ustoz', 'Qadriyat', 'Mustaqillik', 'Yashash'], answer: 'Mustaqillik' },
-      { question: 'Qaysi hukmdor davlatni barpo etdi?', options: ['Amir Temur', 'Ali', 'Bobur', 'Sardor'], answer: 'Amir Temur' },
-      { question: 'Qaysi yilda bayram bo\'ladi?', options: ['1945', '1991', '2000', '1970'], answer: '1991' },
-      { question: 'Qaysi tarixiy shaxs adabiyotga ta\'sir etdi?', options: ['Alisher Navoiy', 'Quvnoq', 'Haydovchi', 'Bo\'ri'], answer: 'Alisher Navoiy' }
-    ],
-    advanced: [
-      { question: 'Qaysi yilgi voqealar "Buyuk geografik kashfiyotlar" deb nomlanadi?', options: ['15-16 asr', '13-14 asr', '17-18 asr', '19 asr'], answer: '15-16 asr' },
-      { question: 'Qaysi qahramon Chingizxon bilan birga yurish qilgan?', options: ['Temur', 'Bektemir', 'Jaloliddin Manguberdi', 'Nemat'], answer: 'Jaloliddin Manguberdi' },
-      { question: 'Qaysi davlatning asoschisi Napoleon?', options: ['Fransiya', 'Italiya', 'Germaniya', 'Angliya'], answer: 'Fransiya' },
-      { question: 'Qaysi yilga 9-may Bayrami nishonlanadi?', options: ['1941', '1945', '1947', '1950'], answer: '1945' },
-      { question: 'Alisher Navoiy qaysi asarini yozgan?', options: ['“Farhod va Shirin”', '“Boburnoma”', '“Ming bir kecha”', '“Qutadgu bilig”'], answer: '“Farhod va Shirin”' },
-      { question: 'Qaysi hukmdor Mavlono Jaloliddin Rumi bilan bog\'liq?', options: ['Sultan Salohiddin', 'Giyosiddin Balban', 'Sulton Muhammad', 'Xoja Ahror'], answer: 'Sultan Salohiddin' },
-      { question: 'Qaysi voqeada "Ming yillik urush" bo\'lgan?', options: ['Fransiya va Angliya', 'AQSh va Ispaniya', 'Rossiya va Turkiya', 'Italiya va Germaniya'], answer: 'Fransiya va Angliya' },
-      { question: 'Qaysi sulola O\'rta Osiyoda hukmronlik qilgan?', options: ['Samaniylar', 'Mongollar', 'Rashidiylar', 'Shayboniylar'], answer: 'Samaniylar' },
-      { question: 'Moskva shahrining asos solinishi qaysi asrga to\'g\'ri keladi?', options: ['12-asr', '13-asr', '14-asr', '15-asr'], answer: '12-asr' },
-      { question: 'Qaysi yilgi voqeada "Buxoro xonligi" tugadi?', options: ['1868', '1920', '1881', '1905'], answer: '1868' }
-    ]
-  },
   informatika: {
     basic: [
       { question: 'Qaysi buyruq ekranga yozuv chiqaradi?', options: ['print()', 'show()', 'type()', 'echo()'], answer: 'print()' },
@@ -127,32 +75,6 @@ const questionBank = {
       { question: 'DOM deganda nima tushuniladi?', options: ['Dokument obyekt modeli', 'Dastur ma\'lumot modeli', 'Dastur o\'zgartirish mexanizmi', 'Down object manager'], answer: 'Dokument obyekt modeli' },
       { question: 'Qaysi operator “va” ma\'nosi bilan ishlatiladi?', options: ['&&', '||', '==', '!='], answer: '&&' },
       { question: 'Qaysi qiymat JSda falsy bo\'ladi?', options: ['0', '""', 'false', 'barchasi'], answer: 'barchasi' }
-    ]
-  },
-  adabiyot: {
-    basic: [
-      { question: '“Boburnoma” kitobining muallifi kim?', options: ['Bobur', 'Navoiy', 'Furqat', 'Guliston'], answer: 'Bobur' },
-      { question: 'Qaysi shoir “Yorqin tush” she\'rini yozgan?', options: ['Navoiy', 'Furqat', 'Hamza', 'Chulpon'], answer: 'Navoiy' },
-      { question: '“Qora qog\'oz” asari kimga tegishli?', options: ['Abdulla Qahhor', 'Cho\'lpon', 'Oybek', 'G\'afur G\'ulom'], answer: 'Abdulla Qahhor' },
-      { question: 'Qaysi asar “Oltin vodiy” haqida yozilgan?', options: ['“Qorako\'l”', '“Ming bir kecha”', '“Navoiy”', '“O\'zingni o\'zi asir qil”'], answer: '“Qorako\'l”' },
-      { question: 'Adabiyotdagi “epik” nima?', options: ['Katta hajmli asar', 'Qisqa she\'r', 'Maqola', 'Dramatik matn'], answer: 'Katta hajmli asar' },
-      { question: 'She\'rning qisqacha turi nimadan iborat?', options: ['Bayt', 'Matn', 'Hikoya', 'Roman'], answer: 'Bayt' },
-      { question: 'Qaysi janrda voqealar rivojlanadi?', options: ['Roman', 'Maqola', 'She\'r', 'Mantiq'], answer: 'Roman' },
-      { question: '“Farhod va Shirin” asari kimga tegishli?', options: ['Navoiy', 'Hamza', 'Furqat', 'Chulpon'], answer: 'Navoiy' },
-      { question: '“Yetti yoqti” shakli qaysi janrga tegishli?', options: ['She\'r', 'Roman', 'Doston', 'Qisqa hikoya'], answer: 'Doston' },
-      { question: 'Qaysi muallif “Shum bola” hikoyasini yozgan?', options: ['Oybek', 'Abdulla Qahhor', 'G\'afur G\'ulom', 'Hamza'], answer: 'Abdulla Qahhor' }
-    ],
-    advanced: [
-      { question: '“Farhod va Shirin” poemasining muallifi kim?', options: ['Navoiy', 'Furqat', 'Navoi', 'Hamza'], answer: 'Navoiy' },
-      { question: '“Sovet adabiyoti” qaysi asrga oid?', options: ['20-asr', '18-asr', '10-asr', '17-asr'], answer: '20-asr' },
-      { question: 'Qaysi yozuvchi “Shaytanat” asari bilan tanilgan?', options: ['Abdulla Qahhor', 'Tolstoy', 'G\'afur G\'ulom', 'Chulpon'], answer: 'G\'afur G\'ulom' },
-      { question: 'Qaysi janrda yoshlar hayoti va muammolari aks etadi?', options: ['Roman', 'Masal', 'Maqola', 'Vaqf'], answer: 'Roman' },
-      { question: '“Maqsadim - Hayot” asari kimga tegishli?', options: ['Abdulla Qahhor', 'Chulpon', 'G\'afur G\'ulom', 'Fitrat'], answer: 'Chulpon' },
-      { question: '“Qutadgu bilig” asari qanday janrga kiradi?', options: ['Nasr', 'She\'r', 'Doston', 'Dramma'], answer: 'She\'r' },
-      { question: '“Muloqot” so\'zi qaysi ma\'noni bildiradi?', options: ['Suhbat', 'Tushuncha', 'Aqliy xabardorlik', 'Yod'], answer: 'Suhbat' },
-      { question: 'Qaysi janrda ma\'naviy va axloqiy masalalar yoritiladi?', options: ['Doston', 'Roman', 'Maqola', 'Hikoya'], answer: 'Roman' },
-      { question: 'Qaysi asar “Beyaz” nomi bilan tanilgan?', options: ['She\'r', 'Roman', 'Hikoya', 'Doston'], answer: 'Roman' },
-      { question: 'Adabiyotdagi asosiy hikoya elementlari qaysi?', options: ['Qahramon, voqea, muammo', 'Maqola, ta\'rif, xulosa', 'Narsalar, fikir, savol'], answer: 'Qahramon, voqea, muammo' }
     ]
   },
   english: {
@@ -272,8 +194,8 @@ const ui = {
 };
 
 function showScreen(name) {
-  Object.values(ui.screens).forEach((screen) => screen.classList.remove('active'));
-  ui.screens[name].classList.add('active');
+  Object.values(ui.screens).forEach((screen) => screen && screen.classList.remove('active'));
+  if (ui.screens[name]) ui.screens[name].classList.add('active');
 }
 
 function getSubjectLabel(subject) {
@@ -294,16 +216,11 @@ function getSubjectLabel(subject) {
 function getQuestionsForDifficulty() {
   const pool = questionBank[state.selectedSubject];
   if (!pool) return [];
-
   switch (state.selectedDifficulty) {
-    case 'oson':
-      return pool.basic || [];
-    case 'orta':
-      return (pool.advanced && pool.advanced.length ? pool.advanced : pool.basic) || [];
-    case 'qiyin':
-      return pool.advanced || pool.basic || [];
-    default:
-      return pool.basic || [];
+    case 'oson': return pool.basic || [];
+    case 'orta': return (pool.advanced && pool.advanced.length ? pool.advanced : pool.basic) || [];
+    case 'qiyin': return pool.advanced || pool.basic || [];
+    default: return pool.basic || [];
   }
 }
 
@@ -326,10 +243,8 @@ function resetState() {
   state.answered = { p1: false, p2: false };
   state.roundQuestions = { p1: null, p2: null };
   clearTimer();
-
   ui.statusText.textContent = 'Fan tanlang';
   ui.continueToMode.disabled = true;
-
   ui.subjectGrid.querySelectorAll('.choice-btn').forEach((btn) => btn.classList.remove('selected'));
   ui.modeGrid.querySelectorAll('.choice-btn').forEach((btn) => btn.classList.remove('selected'));
   ui.difficultyGrid.querySelectorAll('.choice-btn').forEach((btn) => btn.classList.remove('selected'));
@@ -363,7 +278,6 @@ function selectDifficulty(level) {
 
 function startGame() {
   if (!state.selectedSubject || !state.selectedMode || !state.selectedDifficulty) return;
-
   const basePool = shuffle(getQuestionsForDifficulty());
   const count = Math.min(5, basePool.length);
   state.questions = basePool.slice(0, count);
@@ -371,7 +285,6 @@ function startGame() {
   state.scores = { p1: 0, p2: 0 };
   state.answered = { p1: false, p2: false };
   state.roundQuestions = { p1: null, p2: null };
-
   ui.subjectLabel.textContent = getSubjectLabel(state.selectedSubject);
   ui.statusText.textContent = `${getSubjectLabel(state.selectedSubject)} • ${state.selectedMode === 'ai' ? 'VS AI' : 'VS Player'} • ${state.selectedDifficulty}`;
   showScreen('game');
@@ -381,7 +294,6 @@ function startGame() {
 function renderRound() {
   const total = state.questions.length;
   const questionPool = state.questions;
-
   if (state.round >= total) {
     finishGame();
     return;
@@ -413,33 +325,27 @@ function renderBoardSingle() {
   board.innerHTML = '';
   board.classList.add('single');
   board.classList.remove('dual');
-
   const panel = document.createElement('div');
-  panel.className = 'player-panel';
-
+  panel.className = 'player-panel left';
   const title = document.createElement('h3');
-  title.textContent = '1-player';
+  title.textContent = 'Ko\'k jamoa';
   panel.appendChild(title);
-
-  const q = document.createElement('div');
-  q.className = 'question-mini';
-  q.textContent = state.roundQuestions.p1.question;
-  panel.appendChild(q);
-
+  const question = document.createElement('div');
+  question.className = 'question-mini';
+  question.textContent = state.roundQuestions.p1.question;
+  panel.appendChild(question);
   const list = document.createElement('div');
   list.className = 'option-list';
-
-  state.roundQuestions.p1.options.forEach((option) => {
+  state.roundQuestions.p1.options.forEach((option, index) => {
     const btn = document.createElement('button');
     btn.type = 'button';
     btn.className = 'option-btn';
-    btn.textContent = option;
+    btn.innerHTML = `<span class="option-letter">${String.fromCharCode(65 + index)}</span><span>${option}</span>`;
     btn.dataset.player = 'p1';
     btn.dataset.value = option;
     btn.addEventListener('click', () => handleChoice('p1', option));
     list.appendChild(btn);
   });
-
   panel.appendChild(list);
   board.appendChild(panel);
 }
@@ -453,10 +359,10 @@ function renderBoardDual() {
   ['p1', 'p2'].forEach((playerKey) => {
     const question = state.roundQuestions[playerKey];
     const panel = document.createElement('div');
-    panel.className = 'player-panel';
+    panel.className = `player-panel ${playerKey === 'p1' ? 'left' : 'right'}`;
 
     const title = document.createElement('h3');
-    title.textContent = playerKey === 'p1' ? '1-player' : '2-player';
+    title.textContent = playerKey === 'p1' ? 'Ko\'k jamoa' : 'Qizil jamoa';
     panel.appendChild(title);
 
     const qText = document.createElement('div');
@@ -467,11 +373,11 @@ function renderBoardDual() {
     const list = document.createElement('div');
     list.className = 'option-list';
 
-    question.options.forEach((option) => {
+    question.options.forEach((option, index) => {
       const btn = document.createElement('button');
       btn.type = 'button';
       btn.className = 'option-btn';
-      btn.textContent = option;
+      btn.innerHTML = `<span class="option-letter">${String.fromCharCode(65 + index)}</span><span>${option}</span>`;
       btn.dataset.player = playerKey;
       btn.dataset.value = option;
       btn.addEventListener('click', () => handleChoice(playerKey, option));
@@ -494,14 +400,11 @@ function startTimer() {
   clearTimer();
   state.timer = 25;
   ui.timeLabel.textContent = String(state.timer);
-
   state.timerId = setInterval(() => {
     state.timer -= 1;
     ui.timeLabel.textContent = String(state.timer);
-
     if (state.timer <= 0) {
       clearTimer();
-
       if (state.selectedMode === 'ai') {
         autoFinishSingle();
       } else {
@@ -530,31 +433,20 @@ function autoAnswerPlayer(playerKey) {
 
 function handleChoice(playerKey, selectedValue, isAuto = false) {
   if (state.answered[playerKey]) return;
-
   const current = state.roundQuestions[playerKey];
   const correct = selectedValue === current.answer;
   state.answered[playerKey] = true;
-
   const buttons = document.querySelectorAll(`.option-btn[data-player="${playerKey}"]`);
   buttons.forEach((btn) => {
     btn.disabled = true;
-    if (btn.dataset.value === selectedValue && correct) {
-      btn.classList.add('correct');
-    }
-    if (btn.dataset.value === selectedValue && !correct) {
-      btn.classList.add('wrong');
-    }
+    if (btn.dataset.value === current.answer) btn.classList.add('correct');
+    if (btn.dataset.value === selectedValue && !correct) btn.classList.add('wrong');
   });
-
-  if (correct) {
-    state.scores[playerKey] += 10;
-  }
-
+  if (correct) state.scores[playerKey] += 10;
   if (state.selectedMode === 'ai') {
     autoFinishSingle();
     return;
   }
-
   if (state.answered.p1 && state.answered.p2) {
     revealRoundAnswers();
     setTimeout(() => finishRound(), 900);
@@ -572,9 +464,7 @@ function revealRoundAnswers() {
     const playerKey = btn.dataset.player;
     const question = state.roundQuestions[playerKey];
     if (!question) return;
-
     btn.disabled = true;
-
     if (btn.dataset.value === question.answer) {
       btn.classList.add('correct');
       btn.classList.remove('wrong');
@@ -588,7 +478,6 @@ function finishRound() {
     finishGame();
     return;
   }
-
   state.round += 1;
   renderRound();
 }
@@ -597,14 +486,12 @@ function finishGame() {
   clearTimer();
   const p1 = state.scores.p1;
   const p2 = state.scores.p2;
-
   let winnerText = 'Durrang!';
-  if (p1 > p2) winnerText = '1-player yutdi!';
-  else if (p2 > p1) winnerText = state.selectedMode === 'ai' ? 'AI yutdi!' : '2-player yutdi!';
-
+  if (p1 > p2) winnerText = 'Ko\'k jamoa yutdi!';
+  else if (p2 > p1) winnerText = 'Qizil jamoa yutdi!';
   ui.winnerTitle.textContent = winnerText;
   ui.finalScore.textContent = `${p1} - ${p2}`;
-  ui.resultSummary.textContent = `${getSubjectLabel(state.selectedSubject)} • ${state.selectedDifficulty} • ${state.selectedMode === 'ai' ? 'VS AI' : 'VS Player'} • ${state.questions.length} ta`;
+  ui.resultSummary.textContent = `${getSubjectLabel(state.selectedSubject)} • ${state.selectedDifficulty} • ${state.selectedMode === 'ai' ? 'VS AI' : 'VS Player'} • ${state.questions.length} ta savol`;
   showScreen('result');
 }
 
