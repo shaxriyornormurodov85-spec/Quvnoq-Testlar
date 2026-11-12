@@ -431,3 +431,34 @@ h2 { font-size: clamp(1.8rem,3vw,2.6rem); }
  .duel-rope {margin:10px 8px 14px;padding:10px 8px;gap:7px}
  .duel-rope-name {font-size:.55rem}
 }
+
+
+/* Final header logo: circular icon beside the site title, only in the top bar */
+.topbar .brand {
+  display:flex;
+  align-items:center;
+  justify-self:center;
+  gap:12px;
+}
+.topbar .brand-logo {
+  flex:0 0 64px;
+  display:block;
+  width:64px;
+  height:64px;
+  aspect-ratio:1 / 1;
+  object-fit:cover;
+  object-position:center 43%;
+  border-radius:50%;
+  overflow:hidden;
+  border:3px solid #27d9e8;
+  box-shadow:0 0 0 4px rgba(39,217,232,.12),0 0 18px rgba(39,217,232,.28);
+}
+@media(max-width:520px) {
+  .topbar .brand { gap:9px; }
+  .topbar .brand-logo {
+    flex-basis:50px;
+    width:50px;
+    height:50px;
+    border-width:2px;
+  }
+}
