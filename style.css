@@ -479,3 +479,49 @@ h2 { font-size: clamp(1.8rem,3vw,2.6rem); }
 @media(max-width:520px) {
   .topbar .brand-logo { width:58px; height:58px; }
 }
+
+
+/* Desktop-only layout correction: keep both VS Player cards side by side */
+@media (min-width: 861px) {
+  .app-shell { width:min(1280px,96vw); }
+  .game-panel { padding:16px 0 12px; }
+  #versusBoard.versus-board.dual {
+    display:grid !important;
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+    align-items:stretch;
+    gap:18px;
+    width:100%;
+    padding:0 18px;
+    margin:0;
+  }
+  #versusBoard.versus-board.dual > .player-panel {
+    display:flex !important;
+    width:100%;
+    min-width:0;
+    min-height:360px;
+    padding:22px;
+    border-radius:20px;
+  }
+  #versusBoard.versus-board.dual > .player-panel.left {
+    background:linear-gradient(145deg,#eaf7ff,#d9edff);
+  }
+  #versusBoard.versus-board.dual > .player-panel.right {
+    background:linear-gradient(145deg,#fff0f1,#ffe0e4);
+  }
+  #versusBoard.versus-board.dual .question-mini {
+    min-height:84px;
+    margin-bottom:16px;
+    font-size:clamp(1.05rem,1.45vw,1.45rem);
+    line-height:1.35;
+  }
+  #versusBoard.versus-board.dual .option-list { gap:9px; }
+  #versusBoard.versus-board.dual .option-btn {
+    min-height:48px;
+    padding:11px 14px;
+    font-size:clamp(.95rem,1.1vw,1.12rem);
+  }
+  #versusBoard.versus-board.dual::before,
+  #versusBoard.versus-board.dual::after { display:none; }
+  .duel-scorebar { margin:0 18px 14px; }
+  .duel-rope { margin:14px 18px 18px; }
+}
