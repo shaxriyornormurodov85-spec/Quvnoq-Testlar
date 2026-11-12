@@ -225,6 +225,16 @@
     };
   }
 
-  window.addEventListener('beforeunload', stopTimer);
+  // Keep the shared scoreboard clock and AI hit count in sync with the legacy AI timer.
+  const hudSyncId = window.setInterval(() => {
+    if (state.selectedMode === 'ai') {
+      correct.p2 = Math.floor((state.scores.p2 || 0) / 10);
+      correct.p1 = Math.floor((state.scores.p1 || 0) / 10);
+      $('duelClock').textContent = ui.timeLabel.textContent;
+      updateScoreHud();
+    }
+  }, 250);
+
+  window.addEventListener('beforeunload', () => { stopTimer(); clearInterval(hudSyncId); });
   updateScoreHud();
 })();
