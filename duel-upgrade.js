@@ -16,7 +16,7 @@
   const rope = document.createElement('div');
   rope.className = 'duel-rope';
   rope.innerHTML = '<span class="duel-rope-name left">1-O‘YINCHI</span><div class="duel-rope-track"><span class="duel-rope-mid"></span><span class="duel-rope-marker">🏁</span></div><span class="duel-rope-name right">2-O‘YINCHI</span>';
-  board.insertAdjacentElement('afterend', rope);
+  board.insertAdjacentElement('beforebegin', rope);
 
   const $ = (id) => document.getElementById(id);
   function refresh() {
