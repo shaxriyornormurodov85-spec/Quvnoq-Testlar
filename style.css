@@ -308,3 +308,62 @@ h2 { font-size: clamp(1.8rem,3vw,2.6rem); }
   .player-panel { padding: 14px; }
   .question-mini { min-height: 0; }
 }
+
+
+/* Competitive duel scoreboard and tug-of-war arena */
+.duel-scorebar {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 12px;
+  padding: 14px clamp(12px, 3vw, 30px) 18px;
+  background: linear-gradient(180deg,#f8fbff,#edf4fb);
+  border-bottom: 1px solid rgba(17,24,39,.08);
+}
+.duel-score { display:flex; flex-direction:column; gap:3px; min-width:0; }
+.duel-score-left { text-align:left; color:#0878c9; }
+.duel-score-right { text-align:right; color:#d93650; }
+.duel-name { font-size:clamp(.72rem,1.4vw,1rem); font-weight:900; letter-spacing:.08em; }
+.duel-score strong { font-size:clamp(1.7rem,3vw,2.6rem); line-height:1; }
+.duel-score small { color:#596779; font-weight:700; font-size:.8rem; }
+.duel-clock { display:flex; flex-direction:column; align-items:center; gap:2px; min-width:76px; }
+.duel-clock span { font-size:.65rem; letter-spacing:.15em; font-weight:900; color:#64748b; }
+.duel-clock strong { display:grid; place-items:center; width:58px; height:58px; border-radius:50%; background:#fff; color:#172033; border:4px solid #8abbe8; box-shadow:0 4px 12px rgba(15,23,42,.12); font-size:1.55rem; }
+.tug-board { display:block; padding:14px; }
+.tug-layout { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:14px; align-items:stretch; }
+.tug-player { min-height:490px; padding:clamp(14px,2vw,24px); border-radius:20px; }
+.tug-player.left { border:2px solid rgba(10,137,217,.25); }
+.tug-player.right { border:2px solid rgba(239,79,95,.25); }
+.tug-player h3 { font-size:clamp(1.1rem,2vw,1.65rem); margin-bottom:14px; }
+.tug-player .question-mini { min-height:105px; font-size:clamp(1.1rem,1.7vw,1.5rem); }
+.tug-player .option-list { margin-top:8px; }
+.tug-player .option-btn { padding:13px 12px; font-size:clamp(.95rem,1.3vw,1.15rem); }
+.tug-player.is-active { box-shadow:inset 0 0 0 3px rgba(255,255,255,.75),0 8px 22px rgba(20,40,70,.08); }
+.tug-player.is-waiting { opacity:.88; }
+.turn-hint { margin-top:auto; padding-top:16px; color:#285b83; font-weight:800; text-align:center; }
+.waiting-card { min-height:260px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px; color:#64748b; text-align:center; }
+.waiting-icon { font-size:3rem; }
+.waiting-card strong { color:#26364a; font-size:1.2rem; }
+.waiting-card small { font-size:.9rem; }
+.tug-rope-arena { grid-column:1/-1; display:grid; grid-template-columns:auto minmax(0,1fr) auto; align-items:center; gap:12px; padding:14px 18px; border-radius:16px; background:linear-gradient(90deg,#e2f2ff,#f3f6fa 50%,#ffe7ea); border:1px solid rgba(17,24,39,.08); }
+.rope-label { font-size:.72rem; font-weight:900; letter-spacing:.05em; white-space:nowrap; }
+.rope-label-left { color:#0878c9; }.rope-label-right { color:#d93650; }
+.rope-line { height:18px; position:relative; border-radius:20px; background:repeating-linear-gradient(90deg,#9b6a38 0 13px,#c58b4c 13px 19px); box-shadow:inset 0 2px 4px rgba(0,0,0,.18); }
+.rope-line::after { content:""; position:absolute; left:50%; top:-9px; bottom:-9px; width:3px; background:#fff; box-shadow:0 0 0 1px rgba(0,0,0,.15); }
+.rope-knot { position:absolute; z-index:2; left:50%; top:50%; transform:translate(calc(-50% + var(--rope-shift,0%)),-50%); display:grid; place-items:center; width:42px; height:42px; border-radius:50%; background:#fff; border:3px solid #d69a52; box-shadow:0 3px 9px rgba(0,0,0,.2); font-size:1.3rem; transition:transform .35s ease; }
+.rope-line[data-leader="p1"] .rope-knot { border-color:#168bd5; }
+.rope-line[data-leader="p2"] .rope-knot { border-color:#e24b60; }
+.ai-scorebar { border-bottom:2px solid #dce8f4; }
+.ai-scorebar + .versus-board .player-panel { min-height:440px; }
+@media(max-width:680px) {
+  .tug-layout { grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:8px; }
+  .tug-player { min-height:420px; padding:10px; }
+  .tug-player h3 { font-size:.95rem; }
+  .tug-player .question-mini { min-height:120px; font-size:.98rem; }
+  .tug-player .option-btn { padding:10px 8px; gap:6px; font-size:.86rem; }
+  .option-letter { flex-basis:26px; width:26px; height:26px; }
+  .tug-rope-arena { gap:6px; padding:10px 7px; }
+  .rope-label { font-size:.56rem; }
+  .duel-scorebar { padding:10px 9px 13px; gap:5px; }
+  .duel-clock strong { width:48px; height:48px; }
+}
