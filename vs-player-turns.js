@@ -102,7 +102,7 @@
 
   const renderRoundOriginal = window.renderRound;
   window.renderRound = function renderRoundTurnBased() {
-    if (state.selectedMode === 'player') {
+    if (state.selectedMode === 'player' && window.matchMedia('(min-width: 861px)').matches) {
       showTurnQuestion();
       return;
     }
