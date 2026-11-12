@@ -184,6 +184,8 @@ const ui = {
   modeGrid: document.getElementById('modeGrid'),
   difficultyGrid: document.getElementById('difficultyGrid'),
   subjectLabel: document.getElementById('subjectLabel'),
+  questionTag: document.getElementById('questionTag'),
+  questionText: document.getElementById('questionText'),
   roundLabel: document.getElementById('roundLabel'),
   timeLabel: document.getElementById('timeLabel'),
   versusBoard: document.getElementById('versusBoard'),
