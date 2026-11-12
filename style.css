@@ -525,3 +525,118 @@ h2 { font-size: clamp(1.8rem,3vw,2.6rem); }
   .duel-scorebar { margin:0 18px 14px; }
   .duel-rope { margin:14px 18px 18px; }
 }
+
+
+/* Premium colorful game atmosphere: replaces the plain white feel */
+:root {
+  --bg-page:#071426;
+  --panel-bg:#101f35;
+  --text-main:#edf6ff;
+  --text-soft:#a9bdd2;
+  --line-soft:rgba(148,190,230,.18);
+  --shadow-soft:rgba(0,0,0,.28);
+}
+body {
+  min-height:100vh;
+  color:#edf6ff;
+  background:
+    radial-gradient(ellipse at 12% 12%,rgba(14,165,233,.22),transparent 34%),
+    radial-gradient(ellipse at 88% 82%,rgba(244,63,94,.18),transparent 34%),
+    linear-gradient(135deg,#071426 0%,#10233d 48%,#111a32 100%);
+  background-attachment:fixed;
+}
+body::before {
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  opacity:.18;
+  background-image:linear-gradient(rgba(125,211,252,.16) 1px,transparent 1px),linear-gradient(90deg,rgba(125,211,252,.16) 1px,transparent 1px);
+  background-size:42px 42px;
+  mask-image:linear-gradient(to bottom,black,transparent 90%);
+}
+.app-shell { position:relative; z-index:1; }
+.topbar {
+  background:rgba(12,28,49,.82);
+  border-color:rgba(125,211,252,.22);
+  box-shadow:0 12px 35px rgba(0,0,0,.22);
+  backdrop-filter:blur(14px);
+}
+.topbar .brand { color:#f4fbff; }
+#statusText { color:#a9bdd2; }
+.panel {
+  background:linear-gradient(145deg,rgba(17,36,61,.97),rgba(10,24,43,.97));
+  border-color:rgba(125,211,252,.2);
+  box-shadow:0 24px 65px rgba(0,0,0,.32);
+}
+.intro-panel,.result-panel { color:#f1f7ff; }
+.eyebrow { color:#67e8f9; }
+.subtitle,.result-text { color:#b2c5d9; }
+.section-block h3 { color:#7dd3fc; }
+.choice-btn {
+  color:#eaf5ff;
+  background:linear-gradient(145deg,#1b3554,#142942);
+  border-color:rgba(148,190,230,.2);
+  box-shadow:0 7px 18px rgba(0,0,0,.12);
+}
+.choice-btn:hover { border-color:#38bdf8; box-shadow:0 0 22px rgba(56,189,248,.2); }
+.choice-btn.selected {
+  color:#fff;
+  background:linear-gradient(135deg,#075985,#2563eb);
+  border-color:#67e8f9;
+}
+.primary-btn {
+  color:#061827;
+  background:linear-gradient(135deg,#67e8f9,#60a5fa 55%,#818cf8);
+  box-shadow:0 8px 24px rgba(56,189,248,.22);
+}
+.game-panel { background:linear-gradient(145deg,#10243d,#0b1b30); }
+.duel-scorebar {
+  background:linear-gradient(100deg,rgba(8,67,111,.96),rgba(21,39,65,.96) 50%,rgba(111,32,55,.96));
+  border:1px solid rgba(148,190,230,.2);
+  box-shadow:0 12px 28px rgba(0,0,0,.2);
+}
+.duel-score small,.duel-clock span { color:#c3d5e7; }
+.duel-score-left { color:#7dd3fc; }
+.duel-score-right { color:#fda4af; }
+.duel-clock strong {
+  color:#f8fbff;
+  background:#10243d;
+  border-color:#67e8f9;
+  box-shadow:0 0 22px rgba(34,211,238,.2);
+}
+.versus-board.dual .player-panel.left {
+  background:linear-gradient(145deg,#123d60,#102b49);
+  border:1px solid rgba(56,189,248,.35);
+  color:#f0f9ff;
+}
+.versus-board.dual .player-panel.right {
+  background:linear-gradient(145deg,#54263d,#351e36);
+  border:1px solid rgba(251,113,133,.35);
+  color:#fff1f2;
+}
+.versus-board.dual .player-panel h3 { color:#f8fbff; }
+.versus-board.dual .question-mini { color:#f1f7ff; }
+.versus-board.dual .option-btn {
+  color:#f1f7ff;
+  background:rgba(5,18,34,.58);
+  border:1px solid rgba(203,224,245,.15);
+  box-shadow:0 5px 14px rgba(0,0,0,.12);
+}
+.versus-board.dual .option-btn:hover:not(:disabled) {
+  background:rgba(35,74,112,.8);
+  border-color:#67e8f9;
+}
+.versus-board.dual .option-letter { background:rgba(226,242,255,.14); }
+.versus-board.dual .option-btn.correct { background:rgba(22,163,74,.25); color:#bbf7d0; }
+.versus-board.dual .option-btn.wrong { background:rgba(225,29,72,.25); color:#fecdd3; }
+.duel-rope {
+  background:linear-gradient(90deg,rgba(8,67,111,.95),rgba(21,39,65,.95) 50%,rgba(111,32,55,.95));
+  border:1px solid rgba(148,190,230,.22);
+  box-shadow:0 8px 24px rgba(0,0,0,.18);
+}
+.duel-rope-name.left { color:#7dd3fc; }
+.duel-rope-name.right { color:#fda4af; }
+@media(max-width:860px) {
+  body { background-attachment:scroll; }
+}
