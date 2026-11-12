@@ -462,3 +462,20 @@ h2 { font-size: clamp(1.8rem,3vw,2.6rem); }
     border-width:2px;
   }
 }
+
+
+/* Stack the circular logo above the site name, not side-by-side */
+.topbar .brand {
+  flex-direction:column;
+  justify-content:center;
+  gap:7px;
+  text-align:center;
+}
+.topbar .brand-logo {
+  flex:none;
+  width:72px;
+  height:72px;
+}
+@media(max-width:520px) {
+  .topbar .brand-logo { width:58px; height:58px; }
+}
