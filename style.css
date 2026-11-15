@@ -702,3 +702,11 @@ body::before {
  #subjectGrid .subject-art {width:50px;height:50px;font-size:30px;border-radius:14px}
  #subjectGrid .subject-name {font-size:.88rem}
 }
+
+
+/* Individual illustrated subject pictures */
+#subjectGrid .subject-card{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;min-height:150px;padding:12px 10px;background:linear-gradient(145deg,#f8fbff,#eaf4ff);border:1px solid #d6e5f5;border-radius:18px;overflow:hidden}
+#subjectGrid .subject-art{display:flex;align-items:center;justify-content:center;width:100%;height:88px;background:linear-gradient(135deg,#e4f5ff,#fff1d9);border-radius:12px;overflow:hidden}
+#subjectGrid .subject-art svg{display:block;width:100%;height:100%;max-width:150px}
+#subjectGrid .subject-name{font-weight:800;line-height:1.2;text-align:center}
+@media(max-width:520px){#subjectGrid .subject-card{min-height:126px;padding:8px 6px;gap:5px}#subjectGrid .subject-art{height:72px}}
