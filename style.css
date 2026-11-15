@@ -670,3 +670,35 @@ body::before {
  .player-own-timer {gap:4px;font-size:.75rem}
  .player-own-timer strong {min-width:32px;height:32px}
 }
+
+
+/* Subject picker cards: illustration above, subject name below */
+#subjectGrid .subject-card {
+  min-height:132px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  padding:14px 10px;
+  background:linear-gradient(145deg,#ffffff,#eaf4ff);
+  border:1px solid rgba(42,112,170,.22);
+  border-radius:18px;
+  box-shadow:0 6px 16px rgba(24,61,95,.08);
+}
+#subjectGrid .subject-art {
+  width:62px;height:62px;
+  display:grid;place-items:center;
+  border-radius:18px;
+  background:linear-gradient(145deg,#d9efff,#f4faff);
+  box-shadow:inset 0 0 0 1px rgba(35,105,160,.12);
+  font-size:38px;
+  line-height:1;
+}
+#subjectGrid .subject-name {font-weight:900;font-size:1rem;color:#142a43}
+#subjectGrid .subject-card.selected .subject-art {background:linear-gradient(145deg,#b9e3ff,#d7efff)}
+@media(max-width:520px) {
+ #subjectGrid .subject-card {min-height:112px;padding:10px 6px;gap:7px}
+ #subjectGrid .subject-art {width:50px;height:50px;font-size:30px;border-radius:14px}
+ #subjectGrid .subject-name {font-size:.88rem}
+}
