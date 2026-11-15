@@ -710,3 +710,13 @@ body::before {
 #subjectGrid .subject-art svg{display:block;width:100%;height:100%;max-width:150px}
 #subjectGrid .subject-name{font-weight:800;line-height:1.2;text-align:center}
 @media(max-width:520px){#subjectGrid .subject-card{min-height:126px;padding:8px 6px;gap:5px}#subjectGrid .subject-art{height:72px}}
+
+/* Subject illustrations blend into the page background */
+#subjectGrid .subject-card{
+  background:linear-gradient(145deg,#edf5fc,#e6f0fa);
+  border-color:rgba(110,150,190,.22);
+}
+#subjectGrid .subject-art{
+  background:transparent;
+  border-radius:0;
+}
