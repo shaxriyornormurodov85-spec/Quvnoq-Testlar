@@ -210,7 +210,15 @@ function getSubjectLabel(subject) {
     adabiyot: 'Adabiyot',
     english: 'Ingliz tili',
     russian: 'Rus tili',
-    iq: 'IQ Test'
+    iq: 'IQ Test',
+    ona_tili: 'Ona tili',
+    adabiyot: 'Adabiyot',
+    tarix: 'Tarix',
+    geografiya: 'Geografiya',
+    kimyo: 'Kimyo',
+    huquq: 'Huquq',
+    tarbiya: 'Tarbiya',
+    jismoniy: 'Jismoniy tarbiya'
   };
   return map[subject] || subject;
 }
