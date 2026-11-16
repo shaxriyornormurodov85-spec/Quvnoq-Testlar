@@ -56,6 +56,48 @@
       { question: "Interval mashg‘ulotining asosiy xususiyati qaysi?", options: ["Yuklama va tiklanish davrlarining almashishi", "Faqat uzluksiz dam olish", "Faqat cho‘zilish", "Har doim bir xil tezlikda yurish"], answer: "Yuklama va tiklanish davrlarining almashishi" },
       { question: "Sportda koordinatsiya qobiliyati nimani anglatadi?", options: ["Harakatlarni aniq va uyg‘un boshqarish", "Faqat maksimal kuch", "Faqat uzoq masofaga yugurish", "Faqat tana vazni"], answer: "Harakatlarni aniq va uyg‘un boshqarish" },
       { question: "Mashqdan keyingi tiklanish nima uchun muhim?", options: ["Organizmning moslashishi va jarohat xavfini kamaytirish uchun", "Charchoqni ataylab oshirish uchun", "Suv ichishni cheklash uchun", "Uyquni kamaytirish uchun"], answer: "Organizmning moslashishi va jarohat xavfini kamaytirish uchun" }
+    ],
+    matematika: [
+      { question: "Agar x + 1/x = 3 bo‘lsa, x² + 1/x² ning qiymatini toping.", options: ["7", "9", "5", "11"], answer: "7" },
+      { question: "Tenglamani yeching: 2(x − 3) + 5 = 3x − 4.", options: ["3", "5", "−3", "−5"], answer: "3" },
+      { question: "Tomonlari 5, 12 va 13 bo‘lgan uchburchak qanday uchburchak?", options: ["To‘g‘ri burchakli", "O‘tkir burchakli", "O‘tmas burchakli", "Teng tomonli"], answer: "To‘g‘ri burchakli" },
+      { question: "Arifmetik progressiyada a₁=4, d=3. Dastlabki 10 had yig‘indisini toping.", options: ["175", "160", "145", "190"], answer: "175" },
+      { question: "x² − 7x + 12 = 0 tenglamaning katta ildizini toping.", options: ["4", "3", "6", "12"], answer: "4" }
+    ],
+    biologiya: [
+      { question: "Meyozning profaza I bosqichida qaysi jarayon sodir bo‘ladi?", options: ["Krossingover", "DNK translyatsiyasi", "Sitoplazma fotosintezi", "Oqsil denaturatsiyasi"], answer: "Krossingover" },
+      { question: "AaBb × AaBb chatishtirishda, mustaqil ajralish sharoitida aabb genotip ehtimoli qancha?", options: ["1/16", "1/8", "1/4", "3/16"], answer: "1/16" },
+      { question: "Fotosintezning yorug‘lik bosqichida bevosita qaysi moddalar hosil bo‘ladi?", options: ["ATP, NADPH va O₂", "Glyukoza va etanol", "Piruvat va laktat", "Faqat CO₂"], answer: "ATP, NADPH va O₂" },
+      { question: "Populyatsiya genofondidagi allel chastotasini o‘zgartiruvchi evolyutsion omil qaysi?", options: ["Genetik dreyf", "Mitoz", "Diffuziya", "Osmos"], answer: "Genetik dreyf" },
+      { question: "Oqsilning birlamchi strukturasi nimaga bog‘liq?", options: ["Aminokislotalar ketma-ketligiga", "Faqat spiral shakliga", "Lipid qatlamiga", "Hujayra kattaligiga"], answer: "Aminokislotalar ketma-ketligiga" }
+    ],
+    informatika: [
+      { question: "Binary search algoritmining vaqt murakkabligi tartiblangan massivda qanday?", options: ["O(log n)", "O(n)", "O(n²)", "O(1) har doim"], answer: "O(log n)" },
+      { question: "Quyidagi rekursiv funksiya factorial(4) chaqirilganda qanday qiymat qaytaradi: n<=1 bo‘lsa 1, aks holda n*factorial(n−1)?", options: ["24", "16", "12", "10"], answer: "24" },
+      { question: "SQL so‘rovida guruhlangan natijalarni shart bo‘yicha filtrlash uchun qaysi operator ishlatiladi?", options: ["HAVING", "WHERE", "ORDER BY", "DISTINCT"], answer: "HAVING" },
+      { question: "Grafdagi barcha qirralarning vazni manfiy bo‘lmaganida eng qisqa yo‘lni topish uchun qaysi algoritm mos?", options: ["Dijkstra", "Bubble sort", "Binary search", "DFS har doim"], answer: "Dijkstra" },
+      { question: "Hash-jadvalda kolliziya nimani anglatadi?", options: ["Turli kalitlar bir xil indeksga tushishi", "Jadvalning bo‘sh bo‘lishi", "Kalitning o‘chirilishi", "Qiymatlarning saralanishi"], answer: "Turli kalitlar bir xil indeksga tushishi" }
+    ],
+    english: [
+      { question: "Choose the correct inversion: 'Rarely ___ such a difficult problem.'", options: ["have I seen", "I have seen", "I saw", "did I have seen"], answer: "have I seen" },
+      { question: "Complete the mixed conditional: 'If she had taken the job, she ___ in London now.'", options: ["would be", "will be", "would have been", "is"], answer: "would be" },
+      { question: "Choose the correct form: 'The proposal is believed ___ unanimously.'", options: ["to have been approved", "being approved", "to approve", "have approved"], answer: "to have been approved" },
+      { question: "Which sentence contains a reduced relative clause?", options: ["The documents submitted yesterday are missing.", "The documents which yesterday.", "The documents submit yesterday missing.", "The documents were submit."], answer: "The documents submitted yesterday are missing." },
+      { question: "Choose the correct phrase: 'Had I known earlier, I ___ you.'", options: ["would have called", "will call", "would call", "called"], answer: "would have called" }
+    ],
+    russian: [
+      { question: "Укажите предложение с деепричастным оборотом.", options: ["Прочитав письмо, он задумался.", "Он прочитал письмо.", "Письмо было длинным.", "Письмо лежало на столе."], answer: "Прочитав письмо, он задумался." },
+      { question: "В каком варианте правильно оформлена прямая речь?", options: ["«Я вернусь завтра», — сказал он.", "«Я вернусь завтра» сказал он.", "Я вернусь завтра, — «сказал он».", "«Я вернусь завтра — сказал он»."], answer: "«Я вернусь завтра», — сказал он." },
+      { question: "Какое придаточное отвечает на вопрос «при каком условии?»", options: ["Условное", "Причины", "Времени", "Определительное"], answer: "Условное" },
+      { question: "Укажите слово, образованное приставочно-суффиксальным способом.", options: ["Подоконник", "Лес", "Стол", "Морской"], answer: "Подоконник" },
+      { question: "Какой тип связи используется в словосочетании «читать внимательно»?", options: ["Примыкание", "Согласование", "Управление", "Сочинение"], answer: "Примыкание" }
+    ],
+    iq: [
+      { question: "Ketma-ketlikni davom ettiring: 3, 8, 18, 38, 78, ...", options: ["158", "148", "156", "160"], answer: "158" },
+      { question: "5 ta mashina 5 daqiqada 5 ta detal tayyorlaydi. 100 ta mashina 100 ta detalni necha daqiqada tayyorlaydi?", options: ["5 daqiqada", "20 daqiqada", "100 daqiqada", "1 daqiqada"], answer: "5 daqiqada" },
+      { question: "Barcha A lar B, ayrim B lar C. Qaysi xulosa mantiqan aniq?", options: ["A va C kesishishi shart emas", "Barcha A lar C", "Hech bir A B emas", "Barcha C A"], answer: "A va C kesishishi shart emas" },
+      { question: "Soat 4:20 bo‘lganda soat va minut millari orasidagi kichik burchak qancha?", options: ["10°", "20°", "30°", "40°"], answer: "10°" },
+      { question: "Kubning barcha qirralari uzunligi 3 sm. Uning hajmi qancha?", options: ["27 sm³", "9 sm³", "18 sm³", "36 sm³"], answer: "27 sm³" }
     ]
   };
 
