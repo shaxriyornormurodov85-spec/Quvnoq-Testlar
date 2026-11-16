@@ -720,3 +720,17 @@ body::before {
   background:transparent;
   border-radius:0;
 }
+
+
+/* Make the selected subject / mode / difficulty unmistakable. */
+.choice-btn.selected {
+  background: linear-gradient(135deg, #1769d2, #0847a6) !important;
+  color: #ffffff !important;
+  border: 2px solid #06377f !important;
+  box-shadow: 0 0 0 3px rgba(23, 105, 210, .22), 0 8px 22px rgba(8, 71, 166, .28) !important;
+  transform: translateY(-2px);
+}
+.choice-btn.selected:hover {
+  background: linear-gradient(135deg, #1769d2, #0847a6) !important;
+  color: #ffffff !important;
+}
