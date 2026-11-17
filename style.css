@@ -792,3 +792,23 @@ body::before {
 #subjectGrid .subject-sticker.flag-ru span:nth-child(1) { background: #fff; }
 #subjectGrid .subject-sticker.flag-ru span:nth-child(2) { background: #0039a6; }
 #subjectGrid .subject-sticker.flag-ru span:nth-child(3) { background: #d52b1e; }
+
+
+/* Give each subject tile itself a soft colorful background. */
+#subjectGrid .subject-choice {
+  border: 1px solid transparent;
+  color: #17324d;
+  box-shadow: 0 4px 12px rgba(30, 55, 90, .08);
+}
+#subjectGrid .subject-choice:nth-child(6n + 1) { background: linear-gradient(135deg, #dceeff, #c5e2ff); border-color: #a9d2fb; }
+#subjectGrid .subject-choice:nth-child(6n + 2) { background: linear-gradient(135deg, #dcf8e9, #c2efd8); border-color: #a8e2c5; }
+#subjectGrid .subject-choice:nth-child(6n + 3) { background: linear-gradient(135deg, #fff0d8, #ffe0b5); border-color: #f4d09c; }
+#subjectGrid .subject-choice:nth-child(6n + 4) { background: linear-gradient(135deg, #f0e4ff, #dfceff); border-color: #d1bafa; }
+#subjectGrid .subject-choice:nth-child(6n + 5) { background: linear-gradient(135deg, #ffe3ec, #ffd0df); border-color: #f4bbce; }
+#subjectGrid .subject-choice:nth-child(6n) { background: linear-gradient(135deg, #d9f5f5, #bfe9eb); border-color: #a9dcdf; }
+#subjectGrid .subject-choice.selected {
+  background: linear-gradient(135deg, #1769d2, #0847a6) !important;
+  border: 2px solid #06377f !important;
+  color: #fff !important;
+  box-shadow: 0 0 0 3px rgba(23, 105, 210, .2), 0 8px 22px rgba(8, 71, 166, .25) !important;
+}
