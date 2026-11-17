@@ -734,3 +734,39 @@ body::before {
   background: linear-gradient(135deg, #1769d2, #0847a6) !important;
   color: #ffffff !important;
 }
+
+
+/* Compact, colorful subject stickers above the subject names. */
+#subjectGrid .subject-choice {
+  min-height: 104px;
+  padding: 12px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  background: #f7f9ff;
+}
+#subjectGrid .subject-sticker {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  font-size: 1.35rem;
+  line-height: 1;
+  background: linear-gradient(135deg, #d9efff, #e9e2ff);
+  box-shadow: 0 2px 7px rgba(40, 80, 150, .12);
+}
+#subjectGrid .subject-choice:nth-child(4n + 1) .subject-sticker { background: #dcecff; }
+#subjectGrid .subject-choice:nth-child(4n + 2) .subject-sticker { background: #dcf7e8; }
+#subjectGrid .subject-choice:nth-child(4n + 3) .subject-sticker { background: #fff0d8; }
+#subjectGrid .subject-choice:nth-child(4n) .subject-sticker { background: #f1e4ff; }
+#subjectGrid .subject-choice > span:last-child {
+  font-size: .94rem;
+  line-height: 1.2;
+}
+#subjectGrid .subject-choice.selected .subject-sticker {
+  background: rgba(255,255,255,.2) !important;
+}
